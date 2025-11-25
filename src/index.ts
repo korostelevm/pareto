@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { readDirectory } from './services/directory.service.ts';
+import { readDirectory, readDirectoryFiles } from './services/directory.service.ts';
 import { readFileContent } from './services/file.service.ts';
 import { scanFileForPII } from './services/pii-scanner.service.ts';
 import { writeFile } from 'fs/promises';
@@ -27,27 +27,31 @@ interface WorkflowResult {
 }
 
 /**
- * Workflow: Reads 3 files and extracts PII data
+ * Workflow: Reads all files from samples directory and extracts PII data
  * Stores results in JSON format matching individual.schema.json
  */
 async function extractPIIWorkflow() {
   try {
     console.log('🚀 Starting PII Extraction Workflow\n');
 
-    // Sample files to process
-    const sampleFiles = [
-      '/Users/mike/codes/pareto/samples/james_martinez_bank_statement.txt',
-      '/Users/mike/codes/pareto/samples/emily_chen_pay_stub.txt',
-      '/Users/mike/codes/pareto/samples/sarah_johnson_medical_record.txt',
-    ];
+    // Get all files from samples directory
+    const samplesDir = join(process.cwd(), 'samples');
+    const sampleFiles = await readDirectoryFiles(samplesDir);
+    const txtFiles = sampleFiles.filter(f => f.name.endsWith('.txt'));
+
+    if (txtFiles.length === 0) {
+      throw new Error('No .txt files found in samples directory');
+    }
+
+    console.log(`Found ${txtFiles.length} file(s) to process\n`);
 
     const results: IndividualRecord[] = [];
     let totalPIIFound = 0;
 
     // Process each file
-    for (let i = 0; i < sampleFiles.length; i++) {
-      const filePath = sampleFiles[i];
-      console.log(`\n[${i + 1}/${sampleFiles.length}] Processing: ${filePath}`);
+    for (let i = 0; i < txtFiles.length; i++) {
+      const filePath = txtFiles[i].path;
+      console.log(`\n[${i + 1}/${txtFiles.length}] Processing: ${txtFiles[i].name}`);
       console.log('=' .repeat(60));
 
       try {

@@ -120,6 +120,7 @@ async function main() {
   await import('./script-openai.ts');
   await import('./script-pii-emily-bank.ts');
   await import('./script-pii-scanner.ts');
+  await import('./script-pii-resolution.ts');
 
   // Validate OpenAI config if needed (some scripts might not need it)
   try {

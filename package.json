@@ -14,6 +14,7 @@
     "script:openai": "tsx scripts/runner.ts openai",
     "script:pii-scanner": "tsx scripts/runner.ts pii-scanner",
     "script:pii-emily-bank": "tsx scripts/runner.ts pii-emily-bank",
+    "script:pii-resolution": "tsx scripts/runner.ts pii-resolution",
     "type-check": "tsc --noEmit"
   },
   "keywords": [],
