@@ -114,6 +114,7 @@ pareto/
 │   └── index.ts         # Main application entry point
 ├── data/                # Generated extraction results
 ├── samples/             # Sample documents for testing
+├── ground-truth/        # Ground truth user profile data
 ├── package.json
 └── README.md
 ```
