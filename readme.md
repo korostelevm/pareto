@@ -68,7 +68,7 @@ A TypeScript application for extracting and analyzing Personally Identifiable In
 The main application provides a PII extraction workflow:
 
 ```bash
-# Run PII extraction workflow (processes 3 sample files)
+# Run PII extraction workflow (processes all .txt files in samples/)
 npm start extract-pii
 
 # Or run without arguments to see directory reading functionality
@@ -76,7 +76,7 @@ npm start <directory-path>
 ```
 
 The workflow:
-- Reads sample files from the `samples/` directory
+- Reads all `.txt` sample files from the `samples/` directory
 - Extracts PII using the PII scanner service
 - Saves results to `data/pii-extraction-results-{timestamp}.json`
 

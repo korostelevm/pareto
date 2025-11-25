@@ -4,33 +4,14 @@ import { readFileContent } from './services/file.service.ts';
 import { scanFileForPII } from './services/pii-scanner.service.ts';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
-
-interface IndividualRecord {
-  file_name: string;
-  file_path: string;
-  name?: string;
-  address?: string;
-  phone?: string;
-  pii_candidates: Array<{
-    value: string;
-    pii_type: string;
-    confidence: 'high' | 'medium' | 'low';
-    context?: string;
-  }>;
-}
-
-interface WorkflowResult {
-  timestamp: string;
-  total_files_processed: number;
-  total_pii_found: number;
-  files: IndividualRecord[];
-}
+import { ExtractionResults, IndividualRecord } from './services/extraction-reader.service.ts';
+import { PIIResolutionService } from './services/pii-resolution.service.ts';
 
 /**
  * Workflow: Reads all files from samples directory and extracts PII data
  * Stores results in JSON format matching individual.schema.json
  */
-async function extractPIIWorkflow() {
+async function extractPIIWorkflow(): Promise<ExtractionResults> {
   try {
     console.log('🚀 Starting PII Extraction Workflow\n');
 
@@ -90,7 +71,7 @@ async function extractPIIWorkflow() {
     }
 
     // Create final workflow result
-    const workflowResult: WorkflowResult = {
+    const workflowResult: ExtractionResults = {
       timestamp: new Date().toISOString(),
       total_files_processed: results.length,
       total_pii_found: totalPIIFound,
@@ -116,12 +97,67 @@ async function extractPIIWorkflow() {
   }
 }
 
+/**
+ * Full pipeline: extraction + canonical schema approximation
+ * Leaves a stub for the obfuscation stage.
+ */
+async function runFullPipeline() {
+  console.log('🚀 Starting full PII pipeline (extraction → canonical schema)\n');
+
+  // Step 1: extract PII for all sample files
+  const extractionResults = await extractPIIWorkflow();
+
+  // Step 2: run resolution over the in-memory results to approximate canonical schema
+  const resolutionService = new PIIResolutionService();
+  resolutionService.loadFromExtractionResults(extractionResults, {
+    ambiguous_only: false,
+    include_high_confidence_in_conflicts: true,
+    normalize_values: true,
+  });
+
+  const resolution = resolutionService.resolve();
+
+  console.log('\n📋 Canonical Schema Summary');
+  console.log(`   Canonical types: ${resolution.summary.total_canonical_types}`);
+  console.log(`   Unified types:   ${resolution.summary.total_unified_types}`);
+  console.log(`   Value conflicts: ${resolution.summary.value_conflicts_count}`);
+  console.log(`   Type conflicts:  ${resolution.summary.type_conflicts_count}`);
+
+  // Show a few of the most important canonical types
+  const topCanonical = Array.from(resolution.canonical_schema.values())
+    .sort((a, b) => b.total_occurrences - a.total_occurrences)
+    .slice(0, 10);
+
+  if (topCanonical.length > 0) {
+    console.log('\n   Top canonical types:');
+    topCanonical.forEach((entry, index) => {
+      console.log(
+        `   ${index + 1}. ${entry.canonical_type} (${entry.total_occurrences} occurrences, ` +
+          `${entry.unique_values_count} unique values)`
+      );
+      if (entry.all_type_names.length > 1) {
+        console.log(`      Merged from: ${entry.all_type_names.join(', ')}`);
+      }
+    });
+  }
+
+  console.log('\n⚠️ Obfuscation stage not implemented yet.');
+  console.log('   Next steps: push canonical schema to an external schema service and');
+  console.log('   apply per-individual fake identities to replace real PII values.\n');
+}
+
 async function main() {
   // Get directory path from command line arguments
   const args = process.argv.slice(2);
 
-  // If no args or first arg is 'extract-pii', run the PII extraction workflow
-  if (args.length === 0 || args[0] === 'extract-pii') {
+  // If no args, run the full pipeline (extraction + canonical schema)
+  if (args.length === 0) {
+    await runFullPipeline();
+    return;
+  }
+
+  // If first arg is 'extract-pii', run only the extraction workflow
+  if (args[0] === 'extract-pii') {
     await extractPIIWorkflow();
     return;
   }
