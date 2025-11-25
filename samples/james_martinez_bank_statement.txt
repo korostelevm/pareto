@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════════════════
+                    BANK OF AMERICA
+              MONTHLY ACCOUNT STATEMENT
+
+Account Holder: James R Martinez
+Account Number: ****7890
+Account Type: Savings Account
+Statement Period: November 1, 2024 - November 30, 2024
+
+Mailing Address:
+5678 Broadway Avenue
+New York, NY 10001
+
+═══════════════════════════════════════════════════════════════
+
+ACCOUNT SUMMARY
+───────────────────────────────────────────────────────────────
+Beginning Balance (11/01/2024)          $12,450.00
+Total Deposits                          $7,916.67
+Total Withdrawals                       $3,245.50
+Ending Balance (11/30/2024)             $17,121.17
+Annual Percentage Yield (APY)          0.01%
+
+═══════════════════════════════════════════════════════════════
+
+TRANSACTION DETAILS
+───────────────────────────────────────────────────────────────
+
+DATE        DESCRIPTION                          AMOUNT
+───────────────────────────────────────────────────────────────
+11/01/2024  Beginning Balance                          $12,450.00
+11/02/2024  Direct Deposit - GLOBAL FINANCE CORP      $7,916.67
+11/05/2024  ACH Transfer - Rent Payment              -$2,200.00
+11/08/2024  ATM Withdrawal - 1234 Broadway           -$200.00
+11/10/2024  Online Transfer - Credit Card Payment    -$845.50
+11/15/2024  Check #1023 - Con Edison                  -$125.00
+11/18/2024  ACH Transfer - Fidelity Investments      -$500.00
+11/22/2024  ATM Withdrawal - 5678 Broadway           -$100.00
+11/25/2024  Interest Payment                              $0.17
+11/28/2024  Online Transfer - Credit Card Payment    -$175.00
+
+═══════════════════════════════════════════════════════════════
+
+For questions about this statement, please contact us:
+Phone: 1-800-432-1000
+Online: www.bankofamerica.com
+Account Number: 1234567890
+Routing Number: 021000021
+
+This statement is for your records. Please keep it in a safe place.
+
+═══════════════════════════════════════════════════════════════
+

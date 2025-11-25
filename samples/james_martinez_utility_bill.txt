@@ -1,0 +1,101 @@
+═══════════════════════════════════════════════════════════════
+                    CON EDISON
+                    ELECTRIC AND GAS BILL
+
+Account Number: 123456789012
+Service Address: 5678 Broadway Avenue, Apt 4B
+                 New York, NY 10001
+
+Customer Name: James Martinez
+Billing Address: 5678 Broadway Avenue, Apt 4B
+                 New York, NY 10001
+
+Phone: (212) 555-7890
+Email: james.martinez@email.com
+
+═══════════════════════════════════════════════════════════════
+
+BILLING PERIOD: November 1, 2024 - November 30, 2024
+BILL DATE: December 1, 2024
+DUE DATE: December 15, 2024
+ACCOUNT BALANCE: $125.50
+
+═══════════════════════════════════════════════════════════════
+
+ELECTRIC SERVICE
+───────────────────────────────────────────────────────────────
+Service Address: 5678 Broadway Avenue, Apt 4B
+Meter Number: E-987654321
+
+Previous Reading: 12,450 kWh (10/31/2024)
+Current Reading: 12,680 kWh (11/30/2024)
+Usage: 230 kWh
+
+Rate Schedule: Residential Service (RS-1)
+Energy Charge (230 kWh @ $0.18/kWh): $41.40
+Delivery Charge: $15.25
+System Benefits Charge: $2.30
+Sales Tax (8.875%): $5.23
+───────────────────────────────────────────────────────────────
+Total Electric Charges: $64.18
+
+═══════════════════════════════════════════════════════════════
+
+GAS SERVICE
+───────────────────────────────────────────────────────────────
+Service Address: 5678 Broadway Avenue, Apt 4B
+Meter Number: G-123456789
+
+Previous Reading: 1,250 therms (10/31/2024)
+Current Reading: 1,285 therms (11/30/2024)
+Usage: 35 therms
+
+Rate Schedule: Residential Service (RS-1)
+Gas Charge (35 therms @ $1.25/therm): $43.75
+Delivery Charge: $8.50
+System Benefits Charge: $1.75
+Sales Tax (8.875%): $4.82
+───────────────────────────────────────────────────────────────
+Total Gas Charges: $58.82
+
+═══════════════════════════════════════════════════════════════
+
+ACCOUNT SUMMARY
+───────────────────────────────────────────────────────────────
+Previous Balance: $0.00
+Current Charges: $123.00
+Sales Tax: $10.05
+Late Payment Fee: $0.00
+───────────────────────────────────────────────────────────────
+TOTAL AMOUNT DUE: $125.50
+
+═══════════════════════════════════════════════════════════════
+
+PAYMENT OPTIONS
+───────────────────────────────────────────────────────────────
+Online: www.coned.com
+Phone: 1-800-75-CONED (1-800-752-6633)
+Mail: Con Edison, P.O. Box 900, New York, NY 10001
+Auto Pay: Enroll online or call customer service
+
+Account Number for Payment: 123456789012
+
+═══════════════════════════════════════════════════════════════
+
+ENERGY SAVINGS TIPS
+───────────────────────────────────────────────────────────────
+Your usage increased 15% compared to last month. Consider:
+- Using LED light bulbs
+- Setting thermostat to 68°F during winter
+- Unplugging electronics when not in use
+
+Visit coned.com/energysavings for more tips.
+
+═══════════════════════════════════════════════════════════════
+
+For questions about this bill, contact us:
+Phone: 1-800-75-CONED
+Hours: Monday-Friday, 7 AM - 7 PM
+
+═══════════════════════════════════════════════════════════════
+

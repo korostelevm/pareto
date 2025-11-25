@@ -1,0 +1,72 @@
+═══════════════════════════════════════════════════════════════
+                    FORM W-2
+        WAGE AND TAX STATEMENT - 2023
+
+Copy B - To Be Filed With Employee's FEDERAL TAX RETURN
+
+═══════════════════════════════════════════════════════════════
+
+1. Control Number:                    W2-2023-EMP-321654
+
+2. Employer's Name, Address, and ZIP Code:
+   GLOBAL FINANCE CORP
+   200 Park Avenue, Suite 1500
+   New York, NY 10166
+
+3. Employer's Federal ID Number:      12-3456789
+
+═══════════════════════════════════════════════════════════════
+
+4. Employee's Social Security Number: 987-65-4321
+
+5. Employee's Name:                   MARTINEZ, JAMES ROBERT
+   Address:                            5678 Broadway Avenue
+                                       New York, NY 10001
+
+═══════════════════════════════════════════════════════════════
+
+WAGES, TIPS, OTHER COMPENSATION
+───────────────────────────────────────────────────────────────
+Box 1: Wages, tips, other compensation:        $95,000.00
+
+FEDERAL INCOME TAX WITHHELD
+───────────────────────────────────────────────────────────────
+Box 2: Federal income tax withheld:           $12,350.00
+
+SOCIAL SECURITY WAGES
+───────────────────────────────────────────────────────────────
+Box 3: Social Security wages:                  $95,000.00
+Box 4: Social Security tax withheld:           $5,890.00
+
+MEDICARE WAGES AND TIPS
+───────────────────────────────────────────────────────────────
+Box 5: Medicare wages and tips:                $95,000.00
+Box 6: Medicare tax withheld:                   $1,377.50
+
+═══════════════════════════════════════════════════════════════
+
+STATE AND LOCAL TAXES
+───────────────────────────────────────────────────────────────
+Box 15: State: NY
+Box 16: State wages, tips, etc:                $95,000.00
+Box 17: State income tax:                       $5,225.00
+
+Box 18: Local wages, tips, etc:                $95,000.00
+Box 19: Local income tax:                       $2,850.00
+
+═══════════════════════════════════════════════════════════════
+
+OTHER INFORMATION
+───────────────────────────────────────────────────────────────
+Box 12: Code D - 401(k) contributions:         $9,500.00
+Box 12: Code DD - Health insurance:            $1,500.00
+
+═══════════════════════════════════════════════════════════════
+
+This information is being furnished to the Internal Revenue Service.
+If you are required to file a tax return, a negligence penalty or
+other sanction may be imposed on you if this income is taxable and
+the IRS determines that it has not been reported.
+
+═══════════════════════════════════════════════════════════════
+

@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the individual"
+    },
+    "address": {
+      "type": "string",
+      "description": "Complete address of the individual"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number of the individual"
+    },
+    "pii_candidates": {
+      "type": "array",
+      "description": "Array of detected PII (Personally Identifiable Information) candidates found in the document",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "description": "The actual PII value found in the document"
+          },
+          "pii_type": {
+            "type": "string",
+            "description": "The type or category of PII detected (e.g., SSN, credit card number, email, driver license number, date of birth, etc.)"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "Confidence level that this is actually PII"
+          },
+          "context": {
+            "type": "string",
+            "description": "Brief context where this PII was found in the document"
+          }
+        },
+        "required": ["value", "pii_type", "confidence"]
+      }
+    }
+  },
+  "required": ["pii_candidates"]
+}

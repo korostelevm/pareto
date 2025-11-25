@@ -1,0 +1,70 @@
+═══════════════════════════════════════════════════════════════
+                    DATA ANALYTICS SOLUTIONS
+                    PAYROLL STATEMENT
+
+Employee Name: Emily Chen
+Employee ID: EMP-147258
+Social Security Number: ***-**-9123
+Pay Period: November 16, 2024 - November 30, 2024
+Pay Date: December 1, 2024
+
+Address:
+9012 Pine Tree Lane
+Houston, TX 77001
+
+═══════════════════════════════════════════════════════════════
+
+EARNINGS
+───────────────────────────────────────────────────────────────
+Job Title: Data Scientist
+Pay Rate: $140,000.00 Annual Salary
+Pay Period: Bi-Weekly
+
+Current Period Earnings:
+  Regular Hours: 80.00 hours @ $5,384.62 = $4,307.69
+  Overtime Hours: 0.00 hours @ $0.00 = $0.00
+  ────────────────────────────────────────────────
+  Gross Pay:                                    $4,307.69
+
+Year-to-Date Earnings:
+  Gross Pay:                                  $112,000.00
+
+═══════════════════════════════════════════════════════════════
+
+DEDUCTIONS
+───────────────────────────────────────────────────────────────
+Current Period:
+  Federal Income Tax                           -$716.92
+  Social Security Tax (6.2%)                   -$267.08
+  Medicare Tax (1.45%)                         -$62.46
+  Texas State Income Tax                            $0.00
+  Health Insurance (Aetna)                     -$175.00
+  Dental Insurance                              -$25.00
+  Vision Insurance                               -$12.00
+  Retirement 401(k) Contribution               -$430.77
+  Life Insurance                                 -$20.00
+  Dependent Care FSA                            -$200.00
+  ────────────────────────────────────────────────
+  Total Deductions:                          -$1,909.23
+
+Year-to-Date Deductions:                    -$49,600.00
+
+═══════════════════════════════════════════════════════════════
+
+NET PAY
+───────────────────────────────────────────────────────────────
+Current Period Net Pay:                        $2,398.46
+
+Direct Deposit Information:
+  Bank: Wells Fargo
+  Account: ****5555
+  Amount: $2,398.46
+
+═══════════════════════════════════════════════════════════════
+
+For questions, contact Payroll:
+Email: payroll@dataanalytics.com
+Phone: (713) 555-3458 ext. 3000
+
+═══════════════════════════════════════════════════════════════
+

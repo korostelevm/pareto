@@ -1,0 +1,98 @@
+═══════════════════════════════════════════════════════════════
+                    KAISER PERMANENTE MEDICAL CENTER
+                    PATIENT MEDICAL RECORD
+
+═══════════════════════════════════════════════════════════════
+
+PATIENT INFORMATION
+───────────────────────────────────────────────────────────────
+Patient Name: Johnson, Sarah Marie
+Date of Birth: March 15, 1985
+Medical Record Number: MRN-456789123
+Social Security Number: ***-**-6789
+Gender: Female
+Blood Type: O+
+
+Address:
+1234 Oak Street, Apt 5B
+San Francisco, CA 94102
+
+Phone: (555) 234-5678
+Email: sarah.johnson@email.com
+
+Emergency Contact:
+Name: Michael Johnson (Spouse)
+Phone: (555) 234-5681
+Email: michael.johnson@email.com
+
+═══════════════════════════════════════════════════════════════
+
+INSURANCE INFORMATION
+───────────────────────────────────────────────────────────────
+Primary Insurance: Kaiser Permanente
+Member ID: KP-789456123
+Group Number: GRP-456789
+Subscriber: Sarah Johnson
+Relationship: Self
+
+═══════════════════════════════════════════════════════════════
+
+MEDICAL HISTORY
+───────────────────────────────────────────────────────────────
+Allergies: Peanuts, Shellfish
+Current Medications: None
+Past Surgeries: Appendectomy (2010)
+Family History: Mother - Breast Cancer, Father - Heart Disease
+
+═══════════════════════════════════════════════════════════════
+
+VISIT RECORD - November 20, 2024
+───────────────────────────────────────────────────────────────
+Chief Complaint: Routine gynecological examination
+
+Vital Signs:
+  Blood Pressure: 118/75 mmHg
+  Heart Rate: 68 bpm
+  Temperature: 98.4°F
+  Weight: 135 lbs
+  Height: 5'6"
+
+Physical Examination:
+  General: Well-appearing female in no acute distress
+  Cardiovascular: Regular rate and rhythm, no murmurs
+  Respiratory: Clear to auscultation bilaterally
+  Breast Exam: Normal, no masses or discharge
+  Pelvic Exam: Normal, no abnormalities noted
+
+Assessment and Plan:
+  - Annual gynecological examination completed
+  - Pap smear collected and sent to lab
+  - Mammogram scheduled for December 15, 2024
+  - Blood work ordered: CBC, Lipid Panel, Thyroid Function
+  - Continue annual screening schedule
+  - Follow-up: Return in 1 year or as needed
+
+Provider: Dr. Jennifer Lee, MD, OB/GYN
+License Number: CA-987654
+
+═══════════════════════════════════════════════════════════════
+
+LABORATORY RESULTS - November 25, 2024
+───────────────────────────────────────────────────────────────
+Pap Smear Results:
+  Result: Negative for intraepithelial lesion or malignancy
+  HPV Test: Negative
+  Recommendation: Repeat in 3 years
+
+Complete Blood Count:
+  White Blood Cells: 5.8 K/μL (Normal)
+  Red Blood Cells: 4.2 M/μL (Normal)
+  Hemoglobin: 13.2 g/dL (Normal)
+  Platelets: 280 K/μL (Normal)
+
+═══════════════════════════════════════════════════════════════
+
+This record is confidential and protected by HIPAA regulations.
+
+═══════════════════════════════════════════════════════════════
+

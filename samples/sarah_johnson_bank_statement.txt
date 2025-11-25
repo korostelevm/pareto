@@ -1,0 +1,57 @@
+═══════════════════════════════════════════════════════════════
+                    CHASE BANK
+              MONTHLY ACCOUNT STATEMENT
+
+Account Holder: Sarah M Johnson
+Account Number: ****3210
+Account Type: Checking Account
+Statement Period: November 1, 2024 - November 30, 2024
+
+Mailing Address:
+1234 Oak Street, Apt 5B
+San Francisco, CA 94102
+
+═══════════════════════════════════════════════════════════════
+
+ACCOUNT SUMMARY
+───────────────────────────────────────────────────────────────
+Beginning Balance (11/01/2024)          $8,245.50
+Total Deposits                          $10,416.67
+Total Withdrawals                       $6,890.25
+Service Charges                              $12.00
+Ending Balance (11/30/2024)             $11,759.92
+
+═══════════════════════════════════════════════════════════════
+
+TRANSACTION DETAILS
+───────────────────────────────────────────────────────────────
+
+DATE        DESCRIPTION                          AMOUNT
+───────────────────────────────────────────────────────────────
+11/01/2024  Beginning Balance                          $8,245.50
+11/02/2024  Direct Deposit - TECH SOLUTIONS INC       $10,416.67
+11/03/2024  ACH Transfer - Mortgage Payment          -$3,200.00
+11/05/2024  Check #2341 - PG&E                       -$185.50
+11/07/2024  Online Transfer - Credit Card Payment    -$2,450.00
+11/10/2024  ATM Withdrawal - 1234 Market St          -$300.00
+11/12/2024  ACH Transfer - Auto Loan Payment         -$450.00
+11/15/2024  Check #2342 - AT&T                       -$125.75
+11/18/2024  Online Transfer - Investment Account     -$500.00
+11/20/2024  ATM Withdrawal - 5678 Mission St         -$200.00
+11/22/2024  Check #2343 - Water Department            -$85.00
+11/25/2024  Online Transfer - Credit Card Payment    -$479.00
+11/28/2024  Monthly Service Fee                          -$12.00
+11/30/2024  Interest Earned                               $0.92
+
+═══════════════════════════════════════════════════════════════
+
+For questions about this statement, please contact us:
+Phone: 1-800-935-9935
+Online: www.chase.com
+Account Number: 9876543210
+Routing Number: 121000248
+
+This statement is for your records. Please keep it in a safe place.
+
+═══════════════════════════════════════════════════════════════
+

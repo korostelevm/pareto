@@ -1,0 +1,116 @@
+═══════════════════════════════════════════════════════════════
+                    FORM 1040 - U.S. INDIVIDUAL INCOME TAX RETURN
+                    TAX YEAR 2023
+                    JOINT RETURN
+
+═══════════════════════════════════════════════════════════════
+
+TAXPAYER INFORMATION
+───────────────────────────────────────────────────────────────
+Primary Taxpayer Name: CHEN, EMILY LING
+Social Security Number: 456-78-9123
+Date of Birth: 11/08/1988
+
+Spouse Name: CHEN, DAVID
+Social Security Number: 789-12-3456
+Date of Birth: 05/20/1987
+
+Filing Status: Married Filing Jointly
+
+Address:
+9012 Pine Tree Lane
+Houston, TX 77001
+
+Phone: (713) 555-3456
+Email: emily.chen@email.com
+
+═══════════════════════════════════════════════════════════════
+
+INCOME INFORMATION
+───────────────────────────────────────────────────────────────
+Wages, salaries, tips (Emily - W-2):          $140,000.00
+Wages, salaries, tips (David - W-2):          $85,000.00
+Interest Income:                                 $245.00
+Dividend Income:                                  $680.00
+Capital Gains (Long-term):                       $1,200.00
+───────────────────────────────────────────────────────────────
+Total Income:                                $227,125.00
+
+Adjustments to Income:
+  Traditional IRA Contribution (Emily):        -$6,500.00
+  Traditional IRA Contribution (David):         -$6,500.00
+  Dependent Care FSA:                           -$5,000.00
+───────────────────────────────────────────────────────────────
+Adjusted Gross Income (AGI):                 $209,125.00
+
+═══════════════════════════════════════════════════════════════
+
+DEDUCTIONS AND EXEMPTIONS
+───────────────────────────────────────────────────────────────
+Standard Deduction:                          -$27,700.00
+Child Tax Credit (Sophie Chen):              -$2,000.00
+───────────────────────────────────────────────────────────────
+Taxable Income:                              $179,425.00
+
+═══════════════════════════════════════════════════════════════
+
+TAX CALCULATION
+───────────────────────────────────────────────────────────────
+Federal Income Tax:                            $28,450.00
+Alternative Minimum Tax:                            $0.00
+───────────────────────────────────────────────────────────────
+Total Tax:                                     $28,450.00
+
+═══════════════════════════════════════════════════════════════
+
+PAYMENTS AND CREDITS
+───────────────────────────────────────────────────────────────
+Federal Income Tax Withheld (Emily):          $18,200.00
+Federal Income Tax Withheld (David):          $10,500.00
+Estimated Tax Payments:                            $0.00
+───────────────────────────────────────────────────────────────
+Total Payments:                                $28,700.00
+
+═══════════════════════════════════════════════════════════════
+
+REFUND OR AMOUNT OWED
+───────────────────────────────────────────────────────────────
+Total Tax:                                     $28,450.00
+Total Payments:                                $28,700.00
+───────────────────────────────────────────────────────────────
+OVERPAYMENT:                                    $250.00
+
+Refund Amount:                                  $250.00
+
+Refund Method: Direct Deposit
+Bank: Wells Fargo
+Account Number: ****5555
+Routing Number: 111000025
+
+═══════════════════════════════════════════════════════════════
+
+DEPENDENT INFORMATION
+───────────────────────────────────────────────────────────────
+Dependent Name: CHEN, SOPHIE
+Date of Birth: 03/10/2020
+Social Security Number: 000-00-0001
+Relationship: Daughter
+
+═══════════════════════════════════════════════════════════════
+
+SIGNATURES
+───────────────────────────────────────────────────────────────
+Taxpayer Signature (Emily): _________________________
+Taxpayer Signature (David): _________________________
+Date: April 12, 2024
+
+Preparer Signature (if applicable): _________________________
+Preparer PTIN: _________________________
+
+═══════════════════════════════════════════════════════════════
+
+This return was prepared using tax preparation software and 
+filed electronically on April 12, 2024.
+
+═══════════════════════════════════════════════════════════════
+

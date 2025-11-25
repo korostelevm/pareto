@@ -1,0 +1,57 @@
+═══════════════════════════════════════════════════════════════
+                    WELLS FARGO BANK
+              MONTHLY ACCOUNT STATEMENT
+
+Account Holder: Emily L Chen
+Account Number: ****5555
+Account Type: Checking Account
+Statement Period: November 1, 2024 - November 30, 2024
+
+Mailing Address:
+9012 Pine Tree Lane
+Houston, TX 77001
+
+═══════════════════════════════════════════════════════════════
+
+ACCOUNT SUMMARY
+───────────────────────────────────────────────────────────────
+Beginning Balance (11/01/2024)          $15,678.90
+Total Deposits                          $11,666.67
+Total Withdrawals                       $8,234.50
+Service Charges                               $8.00
+Ending Balance (11/30/2024)             $19,103.07
+
+═══════════════════════════════════════════════════════════════
+
+TRANSACTION DETAILS
+───────────────────────────────────────────────────────────────
+
+DATE        DESCRIPTION                          AMOUNT
+───────────────────────────────────────────────────────────────
+11/01/2024  Beginning Balance                         $15,678.90
+11/02/2024  Direct Deposit - DATA ANALYTICS SOL      $11,666.67
+11/03/2024  ACH Transfer - Mortgage Payment          -$2,800.00
+11/05/2024  Check #4567 - CenterPoint Energy         -$145.50
+11/07/2024  Online Transfer - Credit Card Payment    -$3,200.00
+11/10/2024  ACH Transfer - Daycare Payment           -$1,200.00
+11/12/2024  Check #4568 - AT&T                       -$98.75
+11/15/2024  ATM Withdrawal - 1234 Main St            -$300.00
+11/18/2024  Online Transfer - Investment Account      -$800.00
+11/20/2024  Check #4569 - Water Department            -$75.00
+11/22/2024  ACH Transfer - Auto Loan Payment         -$425.00
+11/25/2024  Online Transfer - Credit Card Payment    -$191.25
+11/28/2024  Monthly Service Fee                           -$8.00
+11/30/2024  Interest Earned                                $0.07
+
+═══════════════════════════════════════════════════════════════
+
+For questions about this statement, please contact us:
+Phone: 1-800-869-3557
+Online: www.wellsfargo.com
+Account Number: 5555555555
+Routing Number: 111000025
+
+This statement is for your records. Please keep it in a safe place.
+
+═══════════════════════════════════════════════════════════════
+

@@ -1,0 +1,114 @@
+═══════════════════════════════════════════════════════════════
+                    HOUSTON METHODIST HOSPITAL
+                    PATIENT MEDICAL RECORD
+
+═══════════════════════════════════════════════════════════════
+
+PATIENT INFORMATION
+───────────────────────────────────────────────────────────────
+Patient Name: Chen, Emily Ling
+Date of Birth: November 8, 1988
+Medical Record Number: MRN-123789456
+Social Security Number: ***-**-9123
+Gender: Female
+Blood Type: B+
+
+Address:
+9012 Pine Tree Lane
+Houston, TX 77001
+
+Phone: (713) 555-3456
+Email: emily.chen@email.com
+
+Emergency Contact:
+Name: David Chen (Spouse)
+Phone: (713) 555-3459
+Email: david.chen@email.com
+
+═══════════════════════════════════════════════════════════════
+
+INSURANCE INFORMATION
+───────────────────────────────────────────────────────────────
+Primary Insurance: Aetna
+Policy Number: POL-987654321
+Group Number: GRP-147258
+Subscriber: Emily Chen
+Relationship: Self
+
+═══════════════════════════════════════════════════════════════
+
+MEDICAL HISTORY
+───────────────────────────────────────────────────────────────
+Allergies: Latex, Dust
+Current Medications: Lisinopril 10mg daily (for hypertension)
+Past Surgeries: None
+Family History: Mother - Diabetes Type 2, Father - Hypertension
+
+═══════════════════════════════════════════════════════════════
+
+VISIT RECORD - November 12, 2024
+───────────────────────────────────────────────────────────────
+Chief Complaint: Follow-up for hypertension management
+
+Vital Signs:
+  Blood Pressure: 132/88 mmHg (Elevated - monitoring)
+  Heart Rate: 72 bpm
+  Temperature: 98.6°F
+  Weight: 142 lbs
+  Height: 5'4"
+
+Physical Examination:
+  General: Well-appearing female in no acute distress
+  Cardiovascular: Regular rate and rhythm, no murmurs
+  Respiratory: Clear to auscultation bilaterally
+  Abdomen: Soft, non-tender, non-distended
+  Extremities: No edema, pulses intact
+
+Assessment and Plan:
+  - Blood pressure slightly elevated but improved from last visit
+  - Continue Lisinopril 10mg daily
+  - Recommend lifestyle modifications: reduce sodium intake,
+    increase physical activity, stress management
+  - Blood work ordered: Comprehensive Metabolic Panel,
+    Lipid Panel, Hemoglobin A1C
+  - Follow-up appointment scheduled for January 15, 2025
+  - Patient counseled on importance of medication compliance
+
+Provider: Dr. Robert Smith, MD, Internal Medicine
+License Number: TX-456789
+
+═══════════════════════════════════════════════════════════════
+
+LABORATORY RESULTS - November 18, 2024
+───────────────────────────────────────────────────────────────
+Comprehensive Metabolic Panel:
+  Glucose: 92 mg/dL (Normal)
+  Creatinine: 0.9 mg/dL (Normal)
+  Sodium: 140 mEq/L (Normal)
+  Potassium: 4.2 mEq/L (Normal)
+
+Lipid Panel:
+  Total Cholesterol: 195 mg/dL (Borderline High)
+  HDL: 52 mg/dL (Normal)
+  LDL: 125 mg/dL (Normal)
+  Triglycerides: 90 mg/dL (Normal)
+
+Hemoglobin A1C: 5.2% (Normal)
+
+═══════════════════════════════════════════════════════════════
+
+PRESCRIPTION INFORMATION
+───────────────────────────────────────────────────────────────
+Medication: Lisinopril 10mg tablets
+Dosage: Take one tablet by mouth once daily
+Quantity: 90 tablets
+Refills: 3 refills remaining
+Prescribing Doctor: Dr. Robert Smith
+Pharmacy: CVS Pharmacy #890, 1234 Main St, Houston, TX
+
+═══════════════════════════════════════════════════════════════
+
+This record is confidential and protected by HIPAA regulations.
+
+═══════════════════════════════════════════════════════════════
+

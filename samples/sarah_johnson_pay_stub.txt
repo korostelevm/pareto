@@ -1,0 +1,70 @@
+═══════════════════════════════════════════════════════════════
+                    TECH SOLUTIONS INC.
+                    PAYROLL STATEMENT
+
+Employee Name: Sarah Johnson
+Employee ID: EMP-789456
+Social Security Number: ***-**-6789
+Pay Period: November 16, 2024 - November 30, 2024
+Pay Date: December 1, 2024
+
+Address:
+1234 Oak Street, Apt 5B
+San Francisco, CA 94102
+
+═══════════════════════════════════════════════════════════════
+
+EARNINGS
+───────────────────────────────────────────────────────────────
+Job Title: Senior Software Engineer
+Pay Rate: $125,000.00 Annual Salary
+Pay Period: Bi-Weekly
+
+Current Period Earnings:
+  Regular Hours: 80.00 hours @ $4,807.69 = $3,846.15
+  Overtime Hours: 0.00 hours @ $0.00 = $0.00
+  ────────────────────────────────────────────────
+  Gross Pay:                                    $3,846.15
+
+Year-to-Date Earnings:
+  Gross Pay:                                  $100,000.00
+
+═══════════════════════════════════════════════════════════════
+
+DEDUCTIONS
+───────────────────────────────────────────────────────────────
+Current Period:
+  Federal Income Tax                           -$642.15
+  Social Security Tax (6.2%)                   -$238.46
+  Medicare Tax (1.45%)                         -$55.77
+  California State Income Tax                  -$230.77
+  California SDI (State Disability)             -$38.46
+  Health Insurance (Kaiser)                    -$150.00
+  Dental Insurance                              -$20.00
+  Vision Insurance                               -$10.00
+  Retirement 401(k) Contribution               -$384.62
+  Life Insurance                                 -$15.00
+  ────────────────────────────────────────────────
+  Total Deductions:                          -$1,790.23
+
+Year-to-Date Deductions:                    -$46,500.00
+
+═══════════════════════════════════════════════════════════════
+
+NET PAY
+───────────────────────────────────────────────────────────────
+Current Period Net Pay:                        $2,055.92
+
+Direct Deposit Information:
+  Bank: Chase Bank
+  Account: ****3210
+  Amount: $2,055.92
+
+═══════════════════════════════════════════════════════════════
+
+For questions, contact Payroll:
+Email: payroll@techsolutions.com
+Phone: (555) 987-6543 ext. 2000
+
+═══════════════════════════════════════════════════════════════
+

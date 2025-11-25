@@ -1,0 +1,201 @@
+{
+  "timestamp": "2025-11-25T16:20:53.751Z",
+  "total_files_processed": 3,
+  "total_pii_found": 28,
+  "files": [
+    {
+      "file_name": "james_martinez_bank_statement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_bank_statement.txt",
+      "name": "James R Martinez",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "phone": "1-800-432-1000",
+      "pii_candidates": [
+        {
+          "value": "James R Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Account Holder"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "Mailing Address",
+          "confidence": "high",
+          "context": "Mailing Address"
+        },
+        {
+          "value": "1234567890",
+          "pii_type": "Bank Account Number",
+          "confidence": "high",
+          "context": "Account Number at the bottom of the statement"
+        },
+        {
+          "value": "021000021",
+          "pii_type": "Routing Number",
+          "confidence": "high",
+          "context": "Routing Number at the bottom of the statement"
+        },
+        {
+          "value": "1-800-432-1000",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact information for questions about the statement"
+        }
+      ]
+    },
+    {
+      "file_name": "emily_chen_pay_stub.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/emily_chen_pay_stub.txt",
+      "name": "Emily Chen",
+      "address": "9012 Pine Tree Lane\nHouston, TX 77001",
+      "pii_candidates": [
+        {
+          "value": "Emily Chen",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Employee Name"
+        },
+        {
+          "value": "***-**-9123",
+          "pii_type": "Social Security Number",
+          "confidence": "medium",
+          "context": "Social Security Number"
+        },
+        {
+          "value": "9012 Pine Tree Lane\nHouston, TX 77001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Address"
+        },
+        {
+          "value": "payroll@dataanalytics.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Contact information for Payroll"
+        },
+        {
+          "value": "(713) 555-3458 ext. 3000",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact information for Payroll office"
+        },
+        {
+          "value": "Wells Fargo",
+          "pii_type": "Banking Information",
+          "confidence": "medium",
+          "context": "Direct Deposit Information - Bank name"
+        },
+        {
+          "value": "****5555",
+          "pii_type": "Bank Account Number",
+          "confidence": "medium",
+          "context": "Direct deposit account number masked for privacy"
+        }
+      ]
+    },
+    {
+      "file_name": "sarah_johnson_medical_record.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/sarah_johnson_medical_record.txt",
+      "name": "Johnson, Sarah Marie",
+      "address": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+      "phone": "(555) 234-5678",
+      "pii_candidates": [
+        {
+          "value": "Sarah Marie Johnson",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Patient Information section, as the patient name."
+        },
+        {
+          "value": "March 15, 1985",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Patient Information section, birthdate."
+        },
+        {
+          "value": "MRN-456789123",
+          "pii_type": "Medical Record Number",
+          "confidence": "high",
+          "context": "Patient Information section, assigned medical record identifier."
+        },
+        {
+          "value": "***-**-6789",
+          "pii_type": "Partial Social Security Number",
+          "confidence": "high",
+          "context": "Patient Information section, redacted social security number."
+        },
+        {
+          "value": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Patient Information section, residence address."
+        },
+        {
+          "value": "(555) 234-5678",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Patient Information section, contact phone number."
+        },
+        {
+          "value": "sarah.johnson@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Patient Information section, email address."
+        },
+        {
+          "value": "Kaiser Permanente",
+          "pii_type": "Employer Information",
+          "confidence": "medium",
+          "context": "Insurance Information section, as the primary insurance provider."
+        },
+        {
+          "value": "KP-789456123",
+          "pii_type": "Insurance Member ID",
+          "confidence": "high",
+          "context": "Insurance Information section, insurance member identifier."
+        },
+        {
+          "value": "GRP-456789",
+          "pii_type": "Insurance Group Number",
+          "confidence": "high",
+          "context": "Insurance Information section, group ID."
+        },
+        {
+          "value": "Michael Johnson",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Patient Information section as emergency contact name."
+        },
+        {
+          "value": "(555) 234-5681",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Emergency contact phone in Patient Information."
+        },
+        {
+          "value": "michael.johnson@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Contact email address in Patient Information."
+        },
+        {
+          "value": "Dr. Jennifer Lee, MD",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Provider section in doctor's note"
+        },
+        {
+          "value": "CA-987654",
+          "pii_type": "License Number",
+          "confidence": "high",
+          "context": "Provider section in doctor's note"
+        },
+        {
+          "value": "December 15, 2024",
+          "pii_type": "Date",
+          "confidence": "medium",
+          "context": "Date of scheduled mammogram"
+        }
+      ]
+    }
+  ]
+}

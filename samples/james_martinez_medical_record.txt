@@ -1,0 +1,99 @@
+═══════════════════════════════════════════════════════════════
+                    MANHATTAN MEDICAL CENTER
+                    PATIENT MEDICAL RECORD
+
+═══════════════════════════════════════════════════════════════
+
+PATIENT INFORMATION
+───────────────────────────────────────────────────────────────
+Patient Name: Martinez, James Robert
+Date of Birth: July 22, 1992
+Medical Record Number: MRN-789123456
+Social Security Number: ***-**-4321
+Gender: Male
+Blood Type: A-
+
+Address:
+5678 Broadway Avenue
+New York, NY 10001
+
+Phone: (212) 555-7890
+Email: james.martinez@email.com
+
+Emergency Contact:
+Name: Maria Martinez (Mother)
+Phone: (212) 555-7892
+Address: 123 Main Street, Brooklyn, NY 11201
+
+═══════════════════════════════════════════════════════════════
+
+INSURANCE INFORMATION
+───────────────────────────────────────────────────────────────
+Primary Insurance: Blue Cross Blue Shield
+Policy Number: POL-123456789
+Group Number: GRP-987654
+Subscriber: James Martinez
+Relationship: Self
+
+═══════════════════════════════════════════════════════════════
+
+MEDICAL HISTORY
+───────────────────────────────────────────────────────────────
+Allergies: Penicillin
+Current Medications: None
+Past Surgeries: None
+Family History: Mother - Hypertension, Father - Diabetes Type 2
+
+═══════════════════════════════════════════════════════════════
+
+VISIT RECORD - November 15, 2024
+───────────────────────────────────────────────────────────────
+Chief Complaint: Annual physical examination
+
+Vital Signs:
+  Blood Pressure: 128/82 mmHg
+  Heart Rate: 72 bpm
+  Temperature: 98.6°F
+  Weight: 175 lbs
+  Height: 5'10"
+
+Physical Examination:
+  General: Well-appearing male in no acute distress
+  Cardiovascular: Regular rate and rhythm, no murmurs
+  Respiratory: Clear to auscultation bilaterally
+  Abdomen: Soft, non-tender, non-distended
+  Extremities: No edema, pulses intact
+
+Assessment and Plan:
+  - Annual physical examination completed
+  - Blood work ordered: CBC, CMP, Lipid Panel
+  - Recommended: Continue current exercise regimen
+  - Follow-up: Return in 1 year or as needed
+
+Provider: Dr. Sarah Williams, MD
+License Number: NY-123456
+
+═══════════════════════════════════════════════════════════════
+
+LABORATORY RESULTS - November 18, 2024
+───────────────────────────────────────────────────────────────
+Complete Blood Count (CBC):
+  White Blood Cells: 6.2 K/μL (Normal)
+  Red Blood Cells: 4.8 M/μL (Normal)
+  Hemoglobin: 14.5 g/dL (Normal)
+  Platelets: 250 K/μL (Normal)
+
+Comprehensive Metabolic Panel:
+  Glucose: 95 mg/dL (Normal)
+  Creatinine: 1.0 mg/dL (Normal)
+  Total Cholesterol: 185 mg/dL (Normal)
+  HDL: 45 mg/dL (Normal)
+  LDL: 120 mg/dL (Normal)
+  Triglycerides: 100 mg/dL (Normal)
+
+═══════════════════════════════════════════════════════════════
+
+This record is confidential and protected by HIPAA regulations.
+
+═══════════════════════════════════════════════════════════════
+

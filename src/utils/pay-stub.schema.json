@@ -1,0 +1,103 @@
+{
+  "type": "object",
+  "properties": {
+    "employeeName": {
+      "type": "string",
+      "description": "Full name of the employee"
+    },
+    "employeeId": {
+      "type": "string",
+      "description": "Employee ID number"
+    },
+    "payPeriodStart": {
+      "type": "string",
+      "description": "Pay period start date"
+    },
+    "payPeriodEnd": {
+      "type": "string",
+      "description": "Pay period end date"
+    },
+    "payDate": {
+      "type": "string",
+      "description": "Date payment was made"
+    },
+    "regularHours": {
+      "type": "number",
+      "description": "Regular hours worked"
+    },
+    "hourlyRate": {
+      "type": "number",
+      "description": "Hourly rate"
+    },
+    "overtimeHours": {
+      "type": "number",
+      "description": "Overtime hours worked"
+    },
+    "overtimeRate": {
+      "type": "number",
+      "description": "Overtime rate"
+    },
+    "grossPay": {
+      "type": "number",
+      "description": "Total gross pay"
+    },
+    "federalTax": {
+      "type": "number",
+      "description": "Federal tax deduction"
+    },
+    "stateTax": {
+      "type": "number",
+      "description": "State tax deduction"
+    },
+    "socialSecurity": {
+      "type": "number",
+      "description": "Social Security deduction"
+    },
+    "medicare": {
+      "type": "number",
+      "description": "Medicare deduction"
+    },
+    "retirement401k": {
+      "type": "number",
+      "description": "401k retirement contribution"
+    },
+    "healthInsurance": {
+      "type": "number",
+      "description": "Health insurance deduction"
+    },
+    "totalDeductions": {
+      "type": "number",
+      "description": "Total deductions"
+    },
+    "netPay": {
+      "type": "number",
+      "description": "Net pay after deductions"
+    },
+    "bankAccountLast4": {
+      "type": "string",
+      "description": "Last 4 digits of bank account"
+    }
+  },
+  "required": [
+    "employeeName",
+    "employeeId",
+    "payPeriodStart",
+    "payPeriodEnd",
+    "payDate",
+    "regularHours",
+    "hourlyRate",
+    "overtimeHours",
+    "overtimeRate",
+    "grossPay",
+    "federalTax",
+    "stateTax",
+    "socialSecurity",
+    "medicare",
+    "retirement401k",
+    "healthInsurance",
+    "totalDeductions",
+    "netPay",
+    "bankAccountLast4"
+  ]
+}
+

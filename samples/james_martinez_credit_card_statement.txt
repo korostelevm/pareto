@@ -1,0 +1,62 @@
+═══════════════════════════════════════════════════════════════
+                    CHASE CREDIT CARD
+                    MONTHLY STATEMENT
+
+Cardholder: James R Martinez
+Account Number: 5500-0000-0000-0004
+Statement Date: November 30, 2024
+Payment Due Date: December 25, 2024
+
+Billing Address:
+5678 Broadway Avenue
+New York, NY 10001
+
+═══════════════════════════════════════════════════════════════
+
+ACCOUNT SUMMARY
+───────────────────────────────────────────────────────────────
+Previous Balance                          $1,245.50
+Payments & Credits                        -$1,245.50
+Purchases                                 $1,875.25
+Cash Advances                                 $0.00
+Fees & Interest                               $28.45
+New Balance                                $1,903.70
+Minimum Payment Due                           $25.00
+Credit Limit                              $15,000.00
+Available Credit                          $13,096.30
+
+═══════════════════════════════════════════════════════════════
+
+TRANSACTION DETAILS
+───────────────────────────────────────────────────────────────
+
+DATE        MERCHANT                        AMOUNT
+───────────────────────────────────────────────────────────────
+11/03/2024  AMAZON.COM PURCHASE              $89.99
+11/05/2024  STARBUCKS #1234                  $12.45
+11/07/2024  WHOLE FOODS MARKET #567          $156.78
+11/10/2024  UBER TRIP                        $24.50
+11/12/2024  APPLE.COM/BILL                   $1,199.00
+11/15/2024  CVS PHARMACY #890                $45.23
+11/18/2024  METRO NORTH RAILROAD             $156.30
+11/20/2024  SEAMLESS.COM                     $38.50
+11/22/2024  SHELL GAS STATION                $52.50
+11/25/2024  NETFLIX.COM                      $15.50
+11/28/2024  AMAZON PRIME                     $85.50
+
+INTEREST CHARGES                            $28.45
+ANNUAL PERCENTAGE RATE (APR)               18.99%
+
+═══════════════════════════════════════════════════════════════
+
+PAYMENT INFORMATION
+───────────────────────────────────────────────────────────────
+To make a payment, you can:
+- Online: www.chase.com
+- Phone: 1-800-935-9935
+- Mail: P.O. Box 15123, Wilmington, DE 19850
+
+Please include your account number: 5500-0000-0000-0004
+
+═══════════════════════════════════════════════════════════════
+

@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════════════
+                    GLOBAL FINANCE CORP
+                    PAYROLL STATEMENT
+
+Employee Name: James Martinez
+Employee ID: EMP-321654
+Social Security Number: ***-**-4321
+Pay Period: November 16, 2024 - November 30, 2024
+Pay Date: December 1, 2024
+
+Address:
+5678 Broadway Avenue
+New York, NY 10001
+
+═══════════════════════════════════════════════════════════════
+
+EARNINGS
+───────────────────────────────────────────────────────────────
+Job Title: Financial Analyst
+Pay Rate: $95,000.00 Annual Salary
+Pay Period: Bi-Weekly
+
+Current Period Earnings:
+  Regular Hours: 80.00 hours @ $3,653.85 = $2,923.08
+  Overtime Hours: 0.00 hours @ $0.00 = $0.00
+  ────────────────────────────────────────────────
+  Gross Pay:                                    $2,923.08
+
+Year-to-Date Earnings:
+  Gross Pay:                                   $76,000.00
+
+═══════════════════════════════════════════════════════════════
+
+DEDUCTIONS
+───────────────────────────────────────────────────────────────
+Current Period:
+  Federal Income Tax                           -$485.23
+  Social Security Tax (6.2%)                   -$181.23
+  Medicare Tax (1.45%)                         -$42.38
+  New York State Income Tax                    -$175.38
+  New York City Income Tax                     -$87.69
+  Health Insurance (BCBS)                      -$125.00
+  Dental Insurance                              -$15.00
+  Vision Insurance                               -$8.00
+  Retirement 401(k) Contribution               -$292.31
+  ────────────────────────────────────────────────
+  Total Deductions:                          -$1,412.22
+
+Year-to-Date Deductions:                    -$36,800.00
+
+═══════════════════════════════════════════════════════════════
+
+NET PAY
+───────────────────────────────────────────────────────────────
+Current Period Net Pay:                        $1,510.86
+
+Direct Deposit Information:
+  Bank: Bank of America
+  Account: ****7890
+  Amount: $1,510.86
+
+═══════════════════════════════════════════════════════════════
+
+For questions, contact Payroll:
+Email: payroll@globalfinance.com
+Phone: +1-212-555-1234 ext. 5000
+
+═══════════════════════════════════════════════════════════════
+
