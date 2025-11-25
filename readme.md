@@ -124,33 +124,6 @@ npx tsx scripts/runner.ts all
 - **pii-scanner** - Demonstrate PII scanner workflow on a sample file
 - **pii-emily-bank** - Demonstrate PII scanner on Emily Chen bank statement
 
-## Project Structure
-
-```
-pareto/
-├── scripts/              # Interactive exploration scripts
-│   ├── runner.ts        # Unified script runner
-│   ├── script-*.ts      # Individual script files
-│   └── README.md        # Detailed script documentation
-├── src/                  # Application source code
-│   ├── services/        # Core services
-│   │   ├── directory.service.ts
-│   │   ├── extraction.service.ts
-│   │   ├── extraction-reader.service.ts
-│   │   ├── file.service.ts
-│   │   ├── openai.service.ts
-│   │   └── pii-scanner.service.ts
-│   ├── utils/           # Utilities and schemas
-│   │   ├── individual.schema.json
-│   │   └── schema.util.ts
-│   └── index.ts         # Main application entry point
-├── data/                # Generated extraction results
-├── samples/             # Sample documents for testing
-├── ground-truth/        # Ground truth user profile data
-├── package.json
-└── README.md
-```
-
 ## Services
 
 ### Directory Service
