@@ -10,6 +10,26 @@ export interface PIIOccurrence {
 }
 
 /**
+ * Group of files that share the same name/address/phone
+ */
+export interface IdentityGroup {
+  /** The identity value (name, address, or phone) */
+  value: string;
+  
+  /** The field type */
+  field: 'name' | 'address' | 'phone';
+  
+  /** Files that share this identity */
+  files: Array<{
+    file_name: string;
+    file_path: string;
+  }>;
+  
+  /** Number of files */
+  count: number;
+}
+
+/**
  * Group of PII candidates that share the same value but may have different types
  * This identifies cases where the same value was classified as different PII types
  */
@@ -119,6 +139,33 @@ export interface PIIConflict {
 }
 
 /**
+ * Unified PII type schema entry
+ */
+export interface UnifiedPIIType {
+  /** Canonical type name */
+  canonical_type: string;
+  
+  /** All variations of this type found */
+  variations: string[];
+  
+  /** Total occurrences across all files */
+  total_occurrences: number;
+  
+  /** Number of unique values */
+  unique_values_count: number;
+  
+  /** Confidence breakdown */
+  confidence_breakdown: {
+    high: number;
+    medium: number;
+    low: number;
+  };
+  
+  /** Files where this type appears */
+  files: string[];
+}
+
+/**
  * Comprehensive resolution result containing all collapsed and flagged data
  */
 export interface PIIResolutionResult {
@@ -127,6 +174,16 @@ export interface PIIResolutionResult {
   
   /** Groups collapsed by type (same type, different values) */
   type_groups: Map<string, TypeGroup>;
+  
+  /** Groups by identity fields (name, address, phone) */
+  identity_groups: {
+    name: Map<string, IdentityGroup>;
+    address: Map<string, IdentityGroup>;
+    phone: Map<string, IdentityGroup>;
+  };
+  
+  /** Unified schema of all PII types */
+  unified_schema: Map<string, UnifiedPIIType>;
   
   /** Array of all identified conflicts */
   conflicts: PIIConflict[];
@@ -139,6 +196,7 @@ export interface PIIResolutionResult {
     value_conflicts_count: number;
     type_conflicts_count: number;
     total_conflicts: number;
+    total_unified_types: number;
   };
   
   /** Filter options used */
@@ -167,15 +225,54 @@ export interface ResolutionOptions {
  */
 export class PIIResolutionService {
   private occurrences: PIIOccurrence[] = [];
+  private records: IndividualRecord[] = [];
+
+  /**
+   * Check if a PII type is an identity-related type (should be excluded from conflicts)
+   */
+  private isIdentityType(piiType: string): boolean {
+    const normalizedType = piiType.toLowerCase();
+    const identityTypes = [
+      'name', 'customer name', 'subscriber name', 'employee name',
+      'address', 'home address', 'mailing address', 'billing address', 'service address',
+      'phone', 'phone number', 'telephone', 'contact phone'
+    ];
+    return identityTypes.some(type => normalizedType.includes(type));
+  }
 
   /**
    * Load PII candidates from extraction results
    */
   loadFromExtractionResults(results: ExtractionResults, options: ResolutionOptions): void {
     this.occurrences = [];
+    this.records = results.files;
     
     for (const file of results.files) {
+      // Normalize identity fields for comparison
+      const normalizedName = file.name ? this.normalizeValue(file.name) : null;
+      const normalizedAddress = file.address ? this.normalizeValue(file.address) : null;
+      const normalizedPhone = file.phone ? this.normalizeValue(file.phone) : null;
+      
       for (const candidate of file.pii_candidates) {
+        // Skip identity-related PII types (Name, Address, Phone) - they're handled by identity grouping
+        if (this.isIdentityType(candidate.pii_type)) {
+          continue;
+        }
+        
+        // Skip candidates that match top-level identity fields (even if not identity type)
+        const candidateValue = options.normalize_values 
+          ? this.normalizeValue(candidate.value)
+          : candidate.value;
+        
+        // Skip if this candidate matches a top-level field
+        if (
+          (normalizedName && candidateValue === normalizedName) ||
+          (normalizedAddress && candidateValue === normalizedAddress) ||
+          (normalizedPhone && candidateValue === normalizedPhone)
+        ) {
+          continue;
+        }
+        
         // Apply filters
         if (options.ambiguous_only && candidate.confidence === 'high') {
           continue;
@@ -212,18 +309,24 @@ export class PIIResolutionService {
     include_high_confidence_in_conflicts: false,
     normalize_values: true,
   }): PIIResolutionResult {
-    if (this.occurrences.length === 0) {
-      throw new Error('No PII candidates loaded. Call loadFromExtractionResults() first.');
+    if (this.records.length === 0) {
+      throw new Error('No records loaded. Call loadFromExtractionResults() first.');
     }
 
-    // Group by value
+    // Group by identity fields (name, address, phone)
+    const identityGroups = this.groupByIdentity(options);
+    
+    // Group by value (only for PII candidates, not identity fields)
     const valueGroups = this.groupByValue(options);
     
-    // Group by type
+    // Group by type (only for PII candidates, not identity fields)
     const typeGroups = this.groupByType(options);
     
+    // Build unified schema
+    const unifiedSchema = this.buildUnifiedSchema(typeGroups);
+    
     // Identify conflicts
-    const conflicts = this.identifyConflicts(valueGroups, typeGroups, options);
+    const conflicts = this.identifyConflicts(valueGroups, typeGroups);
     
     // Build summary
     const summary = {
@@ -233,14 +336,163 @@ export class PIIResolutionService {
       value_conflicts_count: Array.from(valueGroups.values()).filter(g => g.has_type_conflict).length,
       type_conflicts_count: Array.from(typeGroups.values()).filter(g => g.has_value_conflict).length,
       total_conflicts: conflicts.length,
+      total_unified_types: unifiedSchema.size,
     };
 
     return {
       value_groups: valueGroups,
       type_groups: typeGroups,
+      identity_groups: identityGroups,
+      unified_schema: unifiedSchema,
       conflicts,
       summary,
       options,
+    };
+  }
+
+  /**
+   * Build unified schema by aggregating all PII types
+   * Groups types that appear together (same value, different type names)
+   */
+  private buildUnifiedSchema(typeGroups: Map<string, TypeGroup>): Map<string, UnifiedPIIType> {
+    const schema = new Map<string, UnifiedPIIType>();
+    
+    // Find type variations by looking at value groups where same value has different types
+    const typeRelations = new Map<string, Set<string>>();
+    
+    // Build type relationships from value groups
+    for (const occurrence of this.occurrences) {
+      const type = occurrence.candidate.pii_type;
+      if (!typeRelations.has(type)) {
+        typeRelations.set(type, new Set());
+      }
+    }
+    
+    // Find types that appear together (same value, different types)
+    const valueGroups = this.groupByValue({ normalize_values: true, ambiguous_only: false, include_high_confidence_in_conflicts: false });
+    for (const valueGroup of valueGroups.values()) {
+      if (valueGroup.pii_types.length > 1) {
+        // These types are related (same value, different names)
+        for (const type1 of valueGroup.pii_types) {
+          if (!typeRelations.has(type1)) {
+            typeRelations.set(type1, new Set());
+          }
+          for (const type2 of valueGroup.pii_types) {
+            if (type1 !== type2) {
+              typeRelations.get(type1)!.add(type2);
+            }
+          }
+        }
+      }
+    }
+    
+    // Build schema - each type gets its own entry, with variations listed
+    for (const [piiType, group] of typeGroups.entries()) {
+      const relatedTypes = typeRelations.get(piiType) || new Set<string>();
+      const variations = relatedTypes.size > 0 
+        ? Array.from(relatedTypes).sort()
+        : [piiType];
+      
+      schema.set(piiType, {
+        canonical_type: piiType,
+        variations: variations.length > 1 ? variations : [piiType],
+        total_occurrences: group.occurrences,
+        unique_values_count: group.unique_value_count,
+        confidence_breakdown: group.confidence_breakdown,
+        files: Array.from(new Set(group.files)),
+      });
+    }
+    
+    return schema;
+  }
+
+  /**
+   * Group files by identity fields (name, address, phone)
+   */
+  private groupByIdentity(options: ResolutionOptions): {
+    name: Map<string, IdentityGroup>;
+    address: Map<string, IdentityGroup>;
+    phone: Map<string, IdentityGroup>;
+  } {
+    const nameMap = new Map<string, IdentityGroup>();
+    const addressMap = new Map<string, IdentityGroup>();
+    const phoneMap = new Map<string, IdentityGroup>();
+
+    for (const record of this.records) {
+      // Group by name
+      if (record.name) {
+        const key = options.normalize_values 
+          ? this.normalizeValue(record.name)
+          : record.name;
+        
+        if (!nameMap.has(key)) {
+          nameMap.set(key, {
+            value: record.name,
+            field: 'name',
+            files: [],
+            count: 0,
+          });
+        }
+        
+        const group = nameMap.get(key)!;
+        group.files.push({
+          file_name: record.file_name,
+          file_path: record.file_path,
+        });
+        group.count++;
+      }
+
+      // Group by address
+      if (record.address) {
+        const key = options.normalize_values 
+          ? this.normalizeValue(record.address)
+          : record.address;
+        
+        if (!addressMap.has(key)) {
+          addressMap.set(key, {
+            value: record.address,
+            field: 'address',
+            files: [],
+            count: 0,
+          });
+        }
+        
+        const group = addressMap.get(key)!;
+        group.files.push({
+          file_name: record.file_name,
+          file_path: record.file_path,
+        });
+        group.count++;
+      }
+
+      // Group by phone
+      if (record.phone) {
+        const key = options.normalize_values 
+          ? this.normalizeValue(record.phone)
+          : record.phone;
+        
+        if (!phoneMap.has(key)) {
+          phoneMap.set(key, {
+            value: record.phone,
+            field: 'phone',
+            files: [],
+            count: 0,
+          });
+        }
+        
+        const group = phoneMap.get(key)!;
+        group.files.push({
+          file_name: record.file_name,
+          file_path: record.file_path,
+        });
+        group.count++;
+      }
+    }
+
+    return {
+      name: nameMap,
+      address: addressMap,
+      phone: phoneMap,
     };
   }
 
@@ -396,8 +648,7 @@ export class PIIResolutionService {
    */
   private identifyConflicts(
     valueGroups: Map<string, ValueGroup>,
-    typeGroups: Map<string, TypeGroup>,
-    options: ResolutionOptions
+    typeGroups: Map<string, TypeGroup>
   ): PIIConflict[] {
     const conflicts: PIIConflict[] = [];
 

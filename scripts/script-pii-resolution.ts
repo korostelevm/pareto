@@ -31,6 +31,10 @@ async function runPIIResolutionScript() {
     
     const resolution = resolutionService.resolve();
 
+    // Unified schema
+    const unifiedSchema = Array.from(resolution.unified_schema.values())
+      .sort((a, b) => b.total_occurrences - a.total_occurrences);
+
     // Value conflicts: same value, different types
     const valueConflicts = Array.from(resolution.value_groups.values())
       .filter(g => g.has_type_conflict)
@@ -41,12 +45,20 @@ async function runPIIResolutionScript() {
       .filter(g => g.has_value_conflict)
       .sort((a, b) => b.occurrences - a.occurrences);
 
-    // Clean types: no conflicts (single value, regardless of confidence)
-    const cleanTypes = Array.from(resolution.type_groups.values())
-      .filter(g => !g.has_value_conflict)
-      .sort((a, b) => a.pii_type.localeCompare(b.pii_type));
-
     console.log(`\n📄 ${file.name}`);
+    
+    // Show unified schema
+    if (unifiedSchema.length > 0) {
+      console.log(`\n📋 Unified PII Schema (${unifiedSchema.length} types):`);
+      unifiedSchema.forEach((type, index) => {
+        console.log(`\n  ${index + 1}. ${type.canonical_type}`);
+        if (type.variations.length > 1) {
+          console.log(`     Variations: ${type.variations.join(', ')}`);
+        }
+        console.log(`     Occurrences: ${type.total_occurrences}, Unique Values: ${type.unique_values_count}`);
+        console.log(`     Confidence: High=${type.confidence_breakdown.high}, Medium=${type.confidence_breakdown.medium}, Low=${type.confidence_breakdown.low}`);
+      });
+    }
     
     if (valueConflicts.length > 0) {
       console.log(`\n🔴 Value Conflicts (same value, different types):`);
@@ -59,13 +71,6 @@ async function runPIIResolutionScript() {
       console.log(`\n🟡 Type Conflicts (same type, different values):`);
       typeConflicts.forEach(group => {
         console.log(`  "${group.pii_type}" → Values: ${group.values.map(v => `"${v}"`).join(', ')}`);
-      });
-    }
-
-    if (cleanTypes.length > 0) {
-      console.log(`\n✅ Clean Types (no conflicts):`);
-      cleanTypes.forEach(group => {
-        console.log(`  "${group.pii_type}" - ${group.occurrences} instance(s)`);
       });
     }
 

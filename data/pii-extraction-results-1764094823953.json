@@ -1,0 +1,1363 @@
+{
+  "timestamp": "2025-11-25T18:20:23.952Z",
+  "total_files_processed": 19,
+  "total_pii_found": 199,
+  "files": [
+    {
+      "file_name": "emily_chen_bank_statement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/emily_chen_bank_statement.txt",
+      "name": "Emily L Chen",
+      "address": "9012 Pine Tree Lane, Houston, TX 77001",
+      "pii_candidates": [
+        {
+          "value": "Emily L Chen",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Account Holder"
+        },
+        {
+          "value": "****5555",
+          "pii_type": "Account Number (partial)",
+          "confidence": "medium",
+          "context": "Account Number"
+        },
+        {
+          "value": "9012 Pine Tree Lane, Houston, TX 77001",
+          "pii_type": "Address",
+          "confidence": "high",
+          "context": "Mailing Address"
+        },
+        {
+          "value": "November 1, 2024 - November 30, 2024",
+          "pii_type": "Date",
+          "confidence": "medium",
+          "context": "Statement Period"
+        },
+        {
+          "value": "1-800-869-3557",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact information for statement inquiries"
+        },
+        {
+          "value": "www.wellsfargo.com",
+          "pii_type": "Employer/Organization Information",
+          "confidence": "medium",
+          "context": "Website for contacting bank regarding the statement"
+        },
+        {
+          "value": "5555555555",
+          "pii_type": "Bank Account Number",
+          "confidence": "high",
+          "context": "Direct mention as account number for statement"
+        },
+        {
+          "value": "111000025",
+          "pii_type": "Bank Routing Number",
+          "confidence": "high",
+          "context": "Direct mention as routing number for statement"
+        }
+      ]
+    },
+    {
+      "file_name": "emily_chen_medical_record.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/emily_chen_medical_record.txt",
+      "name": "Emily Ling Chen",
+      "address": "9012 Pine Tree Lane, Houston, TX 77001",
+      "phone": "(713) 555-3456",
+      "pii_candidates": [
+        {
+          "value": "Chen, Emily Ling",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Patient Name"
+        },
+        {
+          "value": "November 8, 1988",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Date of Birth"
+        },
+        {
+          "value": "MRN-123789456",
+          "pii_type": "Medical Record Number",
+          "confidence": "high",
+          "context": "Medical Record Number"
+        },
+        {
+          "value": "***-**-9123",
+          "pii_type": "Social Security Number (partial)",
+          "confidence": "high",
+          "context": "Social Security Number"
+        },
+        {
+          "value": "(713) 555-3456",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Patient Phone"
+        },
+        {
+          "value": "emily.chen@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Patient Email"
+        },
+        {
+          "value": "David Chen",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Emergency Contact Name"
+        },
+        {
+          "value": "(713) 555-3459",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Emergency Contact Phone"
+        },
+        {
+          "value": "david.chen@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Emergency Contact Email"
+        },
+        {
+          "value": "Aetna",
+          "pii_type": "Insurance Provider Name",
+          "confidence": "high",
+          "context": "Primary Insurance"
+        },
+        {
+          "value": "POL-987654321",
+          "pii_type": "Policy Number",
+          "confidence": "high",
+          "context": "Policy Number"
+        },
+        {
+          "value": "Emily Chen",
+          "pii_type": "Subscriber Name",
+          "confidence": "high",
+          "context": "Subscriber Name"
+        },
+        {
+          "value": "Dr. Robert Smith",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Prescribing Doctor"
+        },
+        {
+          "value": "TX-456789",
+          "pii_type": "License Number",
+          "confidence": "high",
+          "context": "Provider's license number"
+        },
+        {
+          "value": "January 15, 2025",
+          "pii_type": "Appointment Date",
+          "confidence": "medium",
+          "context": "Follow-up appointment"
+        },
+        {
+          "value": "November 18, 2024",
+          "pii_type": "Date of Laboratory Results",
+          "confidence": "medium",
+          "context": "Date of laboratory results issued"
+        },
+        {
+          "value": "CVS Pharmacy #890, 1234 Main St, Houston, TX",
+          "pii_type": "Pharmacy Address",
+          "confidence": "high",
+          "context": "Pharmacy location where the prescription was filled"
+        },
+        {
+          "value": "1234 Main St, Houston, TX",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Pharmacy Address - CVS Pharmacy #890"
+        }
+      ]
+    },
+    {
+      "file_name": "emily_chen_pay_stub.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/emily_chen_pay_stub.txt",
+      "name": "Emily Chen",
+      "address": "9012 Pine Tree Lane, Houston, TX 77001",
+      "pii_candidates": [
+        {
+          "value": "EMP-147258",
+          "pii_type": "Employee ID",
+          "confidence": "high",
+          "context": "Payroll Statement"
+        },
+        {
+          "value": "***-**-9123",
+          "pii_type": "Social Security Number",
+          "confidence": "medium",
+          "context": "Payroll Statement"
+        },
+        {
+          "value": "9012 Pine Tree Lane, Houston, TX 77001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Payroll Statement"
+        },
+        {
+          "value": "December 1, 2024",
+          "pii_type": "Pay Date",
+          "confidence": "medium",
+          "context": "Payroll Statement"
+        },
+        {
+          "value": "Health Insurance (Aetna)",
+          "pii_type": "Medical Information",
+          "confidence": "medium",
+          "context": "Payroll Statement"
+        },
+        {
+          "value": "$4,307.69",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Current Period Earnings"
+        },
+        {
+          "value": "Life Insurance",
+          "pii_type": "Policy Information",
+          "confidence": "medium",
+          "context": "Deductions"
+        },
+        {
+          "value": "Wells Fargo",
+          "pii_type": "Bank Name",
+          "confidence": "high",
+          "context": "Direct Deposit Information"
+        },
+        {
+          "value": "****5555",
+          "pii_type": "Partial Bank Account Number",
+          "confidence": "medium",
+          "context": "Direct Deposit Information"
+        },
+        {
+          "value": "payroll@dataanalytics.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Contact Payroll"
+        },
+        {
+          "value": "(713) 555-3458 ext. 3000",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact Payroll"
+        }
+      ]
+    },
+    {
+      "file_name": "emily_chen_tax_return_summary.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/emily_chen_tax_return_summary.txt",
+      "name": "Chen, Emily Ling",
+      "address": "9012 Pine Tree Lane, Houston, TX 77001",
+      "phone": "(713) 555-3456",
+      "pii_candidates": [
+        {
+          "value": "Chen, Emily Ling",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Primary Taxpayer Name"
+        },
+        {
+          "value": "456-78-9123",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Primary Taxpayer"
+        },
+        {
+          "value": "11/08/1988",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Primary Taxpayer"
+        },
+        {
+          "value": "Chen, David",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Spouse Name"
+        },
+        {
+          "value": "789-12-3456",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Spouse"
+        },
+        {
+          "value": "05/20/1987",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Spouse"
+        },
+        {
+          "value": "9012 Pine Tree Lane",
+          "pii_type": "Address",
+          "confidence": "high",
+          "context": "Address"
+        },
+        {
+          "value": "Houston, TX 77001",
+          "pii_type": "Address",
+          "confidence": "high",
+          "context": "Address"
+        },
+        {
+          "value": "(713) 555-3456",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Phone Number"
+        },
+        {
+          "value": "emily.chen@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Primary Taxpayer Email"
+        },
+        {
+          "value": "Sophie Chen",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Child Tax Credit (Sophie Chen): -$2,000.00"
+        },
+        {
+          "value": "Emily",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Taxpayer signature"
+        },
+        {
+          "value": "David",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Taxpayer signature"
+        },
+        {
+          "value": "Wells Fargo",
+          "pii_type": "Financial Institution Name",
+          "confidence": "high",
+          "context": "Bank: Wells Fargo"
+        },
+        {
+          "value": "****5555",
+          "pii_type": "Bank Account Number (masked)",
+          "confidence": "high",
+          "context": "Account Number: ****5555"
+        },
+        {
+          "value": "111000025",
+          "pii_type": "Routing Number",
+          "confidence": "high",
+          "context": "Routing Number: 111000025"
+        },
+        {
+          "value": "CHEN, SOPHIE",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Dependent Name"
+        },
+        {
+          "value": "03/10/2020",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Date of Birth for dependent"
+        },
+        {
+          "value": "000-00-0001",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Social Security Number for dependent"
+        },
+        {
+          "value": "Wells Fargo",
+          "pii_type": "Financial Institution",
+          "confidence": "medium",
+          "context": "Bank associated with refund"
+        },
+        {
+          "value": "****5555",
+          "pii_type": "Bank Account Number (Partially Redacted)",
+          "confidence": "medium",
+          "context": "Account Number associated with refund"
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_bank_statement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_bank_statement.txt",
+      "name": "James R Martinez",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "phone": "1-800-432-1000",
+      "pii_candidates": [
+        {
+          "value": "James R Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Account Holder"
+        },
+        {
+          "value": "1234567890",
+          "pii_type": "Account Number",
+          "confidence": "high",
+          "context": "Account and Routing numbers section"
+        },
+        {
+          "value": "021000021",
+          "pii_type": "Routing Number",
+          "confidence": "high",
+          "context": "Account and Routing numbers section"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Mailing Address"
+        },
+        {
+          "value": "1-800-432-1000",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact section of the statement"
+        },
+        {
+          "value": "Global Finance Corp",
+          "pii_type": "Employer Information",
+          "confidence": "medium",
+          "context": "Direct Deposit section during transaction details."
+        },
+        {
+          "value": "Beginning Balance $12,450.00, Ending Balance $17,121.17",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Account summary section showing balances."
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_credit_card_statement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_credit_card_statement.txt",
+      "name": "James R Martinez",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "pii_candidates": [
+        {
+          "value": "5500-0000-0000-0004",
+          "pii_type": "Credit Card Number",
+          "confidence": "high",
+          "context": "Account Number in Monthly Statement"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Billing Address on statement"
+        },
+        {
+          "value": "James R Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Cardholder name on statement"
+        },
+        {
+          "value": "November 30, 2024",
+          "pii_type": "Date",
+          "confidence": "medium",
+          "context": "Statement Date"
+        },
+        {
+          "value": "December 25, 2024",
+          "pii_type": "Date",
+          "confidence": "medium",
+          "context": "Payment Due Date"
+        },
+        {
+          "value": "1-800-935-9935",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Phone number provided for payment information."
+        },
+        {
+          "value": "5500-0000-0000-0004",
+          "pii_type": "Account Number",
+          "confidence": "medium",
+          "context": "Provided for payment by mail."
+        },
+        {
+          "value": "P.O. Box 15123, Wilmington, DE 19850",
+          "pii_type": "Address",
+          "confidence": "medium",
+          "context": "Mailing address provided for payment."
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_drivers_license.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_drivers_license.txt",
+      "name": "MARTINEZ, JAMES ROBERT",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "phone": "(518) 486-9786",
+      "pii_candidates": [
+        {
+          "value": "DL987654321",
+          "pii_type": "Driver's License Number",
+          "confidence": "high",
+          "context": "License Number section of the DRIVER LICENSE"
+        },
+        {
+          "value": "07/22/1992",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Personal Information section, listed under Date of Birth"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Personal Information section, listed under Address"
+        },
+        {
+          "value": "DON-987654321",
+          "pii_type": "Organ Donor Registration Number",
+          "confidence": "medium",
+          "context": "Organ Donor section, listed as Donor Registration Number"
+        },
+        {
+          "value": "(518) 486-9786",
+          "pii_type": "Phone Number",
+          "confidence": "medium",
+          "context": "Notes section, after \"Phone: \" indication"
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_employment_letter.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_employment_letter.txt",
+      "name": "James Robert Martinez",
+      "address": "200 Park Avenue, Suite 1500, New York, NY 10166",
+      "phone": "(212) 555-1234",
+      "pii_candidates": [
+        {
+          "value": "James Robert Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Employee name mentioned in the employment details and letter salutation."
+        },
+        {
+          "value": "EMP-321654",
+          "pii_type": "Employee ID",
+          "confidence": "medium",
+          "context": "Appears in the context of confirming employment."
+        },
+        {
+          "value": "***-**-4321",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Listed under employment details for identification."
+        },
+        {
+          "value": "July 22, 1992",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Included under the employment details section."
+        },
+        {
+          "value": "January 15, 2020",
+          "pii_type": "Date of Hire",
+          "confidence": "medium",
+          "context": "Date indicating when employment started."
+        },
+        {
+          "value": "$95,000.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Annual salary information stated in employment details."
+        },
+        {
+          "value": "james.martinez@globalfinance.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Work email specified in the contact information."
+        },
+        {
+          "value": "Jennifer Thompson",
+          "pii_type": "Name",
+          "confidence": "medium",
+          "context": "Name of the signatory, Human Resources Manager."
+        },
+        {
+          "value": "200 Park Avenue, Suite 1500",
+          "pii_type": "Work Address",
+          "confidence": "high",
+          "context": "Official address listed within the company contact information."
+        },
+        {
+          "value": "Global Finance Corp",
+          "pii_type": "Employer Information",
+          "confidence": "high",
+          "context": "Employer name frequently appears as the organization of employment."
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_insurance_card.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_insurance_card.txt",
+      "name": "JAMES ROBERT MARTINEZ",
+      "phone": "1-800-555-1234",
+      "pii_candidates": [
+        {
+          "value": "JAMES ROBERT MARTINEZ",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Member Information Section"
+        },
+        {
+          "value": "POL-123456789",
+          "pii_type": "Policy Number",
+          "confidence": "high",
+          "context": "Member Information Section"
+        },
+        {
+          "value": "07/22/1992",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Member Information Section"
+        },
+        {
+          "value": "1-800-555-1234",
+          "pii_type": "Phone Number",
+          "confidence": "medium",
+          "context": "Contact Information Section"
+        },
+        {
+          "value": "1-800-555-5678",
+          "pii_type": "Phone Number",
+          "confidence": "medium",
+          "context": "Contact Information Section"
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_lease_agreement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_lease_agreement.txt",
+      "name": "James Robert Martinez",
+      "address": "5678 Broadway Avenue, Apt 4B, New York, NY 10001",
+      "phone": "(212) 555-7890",
+      "pii_candidates": [
+        {
+          "value": "James Robert Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Tenant Name"
+        },
+        {
+          "value": "July 22, 1992",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Tenant Date of Birth"
+        },
+        {
+          "value": "***-**-4321",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Tenant Social Security Number"
+        },
+        {
+          "value": "(212) 555-7890",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Tenant Phone"
+        },
+        {
+          "value": "james.martinez@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Tenant Email"
+        },
+        {
+          "value": "Maria Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Emergency Contact"
+        },
+        {
+          "value": "(212) 555-7892",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Emergency Contact Phone"
+        },
+        {
+          "value": "5678 Broadway Avenue, Apt 4B, New York, NY 10001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Property Address"
+        },
+        {
+          "value": "September 1, 2023",
+          "pii_type": "Date",
+          "confidence": "high",
+          "context": "Found under 'SIGNATURES' for both Tenant and Landlord Signatures."
+        },
+        {
+          "value": "****7890",
+          "pii_type": "Bank Account Number",
+          "confidence": "medium",
+          "context": "Located under 'RENTAL PAYMENT INFORMATION' related to Bank Transfer method."
+        },
+        {
+          "value": "021000021",
+          "pii_type": "Routing Number",
+          "confidence": "medium",
+          "context": "Located under 'RENTAL PAYMENT INFORMATION' related to Bank Transfer method."
+        },
+        {
+          "value": "Broadway Properties LLC",
+          "pii_type": "Employer Information",
+          "confidence": "low",
+          "context": "Appears under 'Or mail check to:' which is a company address for rental payments."
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_medical_record.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_medical_record.txt",
+      "name": "Martinez, James Robert",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "phone": "(212) 555-7890",
+      "pii_candidates": [
+        {
+          "value": "Martinez, James Robert",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "July 22, 1992",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "MRN-789123456",
+          "pii_type": "Medical Record Number",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "***-**-4321",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "(212) 555-7890",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "james.martinez@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Patient Information"
+        },
+        {
+          "value": "Maria Martinez",
+          "pii_type": "Name",
+          "confidence": "medium",
+          "context": "Emergency Contact"
+        },
+        {
+          "value": "(212) 555-7892",
+          "pii_type": "Phone Number",
+          "confidence": "medium",
+          "context": "Emergency Contact"
+        },
+        {
+          "value": "123 Main Street, Brooklyn, NY 11201",
+          "pii_type": "Address",
+          "confidence": "medium",
+          "context": "Emergency Contact"
+        },
+        {
+          "value": "Blue Cross Blue Shield",
+          "pii_type": "Insurance Provider",
+          "confidence": "medium",
+          "context": "Insurance Information"
+        },
+        {
+          "value": "POL-123456789",
+          "pii_type": "Policy Number",
+          "confidence": "high",
+          "context": "Insurance Information"
+        },
+        {
+          "value": "GRP-987654",
+          "pii_type": "Group Number",
+          "confidence": "medium",
+          "context": "Insurance Information"
+        },
+        {
+          "value": "Dr. Sarah Williams, MD",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Provider information in the assessment and plan section"
+        },
+        {
+          "value": "NY-123456",
+          "pii_type": "License Number",
+          "confidence": "high",
+          "context": "Provider license number in the assessment and plan section"
+        },
+        {
+          "value": "November 18, 2024",
+          "pii_type": "Date",
+          "confidence": "high",
+          "context": "Date of laboratory results"
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_pay_stub.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_pay_stub.txt",
+      "name": "James Martinez",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "pii_candidates": [
+        {
+          "value": "James Martinez",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Employee Name in payroll statement header"
+        },
+        {
+          "value": "***-**-4321",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "Listed as Social Security Number in payroll statement"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "Address",
+          "confidence": "high",
+          "context": "Address section in payroll statement"
+        },
+        {
+          "value": "Bank of America",
+          "pii_type": "Bank Name",
+          "confidence": "medium",
+          "context": "Direct Deposit Information section"
+        },
+        {
+          "value": "****7890",
+          "pii_type": "Bank Account Number",
+          "confidence": "high",
+          "context": "Direct Deposit Information section with masked account number"
+        },
+        {
+          "value": "payroll@globalfinance.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Contact information for Payroll"
+        },
+        {
+          "value": "+1-212-555-1234 ext. 5000",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact information for Payroll"
+        },
+        {
+          "value": "****7890",
+          "pii_type": "Bank Account Number (Partial)",
+          "confidence": "high",
+          "context": "Direct Deposit Information"
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_tax_return_summary.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_tax_return_summary.txt",
+      "name": "MARTINEZ, JAMES ROBERT",
+      "address": "5678 Broadway Avenue New York, NY 10001",
+      "phone": "(212) 555-7890",
+      "pii_candidates": [
+        {
+          "value": "987-65-4321",
+          "pii_type": "Social Security Number",
+          "confidence": "high",
+          "context": "TAXPAYER INFORMATION section"
+        },
+        {
+          "value": "07/22/1992",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "TAXPAYER INFORMATION section"
+        },
+        {
+          "value": "james.martinez@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "TAXPAYER INFORMATION section"
+        },
+        {
+          "value": "$95,000.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Income Information section (Wages, salaries, tips)"
+        },
+        {
+          "value": "$95,575.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Income Information section (Total Income)"
+        },
+        {
+          "value": "$88,825.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Income Information section (Adjusted Gross Income)"
+        },
+        {
+          "value": "$74,975.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Deductions and Exemptions section (Taxable Income)"
+        },
+        {
+          "value": "$11,950.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Tax Calculation section (Total Tax)"
+        },
+        {
+          "value": "April 10, 2024",
+          "pii_type": "Date",
+          "confidence": "high",
+          "context": "Date of signature on the document"
+        },
+        {
+          "value": "****7890",
+          "pii_type": "Bank Account Number",
+          "confidence": "high",
+          "context": "Bank account number for refund method"
+        },
+        {
+          "value": "021000021",
+          "pii_type": "Routing Number",
+          "confidence": "high",
+          "context": "Mentioned under Direct Deposit as the routing number."
+        },
+        {
+          "value": "Bank of America",
+          "pii_type": "Financial Institution",
+          "confidence": "high",
+          "context": "Bank name for refund method"
+        },
+        {
+          "value": "Bank of America",
+          "pii_type": "Financial Information",
+          "confidence": "high",
+          "context": "Mentioned under Direct Deposit as the bank name."
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_utility_bill.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_utility_bill.txt",
+      "name": "James Martinez",
+      "address": "5678 Broadway Avenue, Apt 4B, New York, NY 10001",
+      "phone": "(212) 555-7890",
+      "pii_candidates": [
+        {
+          "value": "123456789012",
+          "pii_type": "Account Number",
+          "confidence": "high",
+          "context": "Account Number for Payment"
+        },
+        {
+          "value": "5678 Broadway Avenue, Apt 4B, New York, NY 10001",
+          "pii_type": "Service Address",
+          "confidence": "high",
+          "context": "Mentioned multiple times in the Electric and Gas Service sections."
+        },
+        {
+          "value": "James Martinez",
+          "pii_type": "Customer Name",
+          "confidence": "high",
+          "context": "Appeared under Customer Name in the bill."
+        },
+        {
+          "value": "5678 Broadway Avenue, Apt 4B, New York, NY 10001",
+          "pii_type": "Billing Address",
+          "confidence": "high",
+          "context": "Listed as the billing address."
+        },
+        {
+          "value": "(212) 555-7890",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Present under the customer's contact information."
+        },
+        {
+          "value": "james.martinez@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Found as the email contact under customer details."
+        },
+        {
+          "value": "1-800-75-CONED",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact us"
+        },
+        {
+          "value": "www.coned.com",
+          "pii_type": "Website URL",
+          "confidence": "medium",
+          "context": "Payment options and energy savings tips."
+        },
+        {
+          "value": "Con Edison, P.O. Box 900, New York, NY 10001",
+          "pii_type": "Mailing Address or Company Information",
+          "confidence": "high",
+          "context": "Payment by mail address"
+        }
+      ]
+    },
+    {
+      "file_name": "james_martinez_w2_form.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/james_martinez_w2_form.txt",
+      "name": "James Robert Martinez",
+      "address": "5678 Broadway Avenue, New York, NY 10001",
+      "pii_candidates": [
+        {
+          "value": "987-65-4321",
+          "pii_type": "social_security_number",
+          "confidence": "high",
+          "context": "Employee's Social Security Number"
+        },
+        {
+          "value": "MARTINEZ, JAMES ROBERT",
+          "pii_type": "name",
+          "confidence": "high",
+          "context": "Employee's Name"
+        },
+        {
+          "value": "5678 Broadway Avenue, New York, NY 10001",
+          "pii_type": "home_address",
+          "confidence": "high",
+          "context": "Employee's Address"
+        },
+        {
+          "value": "GLOBAL FINANCE CORP",
+          "pii_type": "employer_name",
+          "confidence": "high",
+          "context": "Employer's Name"
+        },
+        {
+          "value": "200 Park Avenue, Suite 1500, New York, NY 10166",
+          "pii_type": "employer_address",
+          "confidence": "high",
+          "context": "Employer's Address"
+        },
+        {
+          "value": "12-3456789",
+          "pii_type": "employer_identification_number",
+          "confidence": "high",
+          "context": "Employer's Federal ID Number"
+        },
+        {
+          "value": "State: NY",
+          "pii_type": "Employer Information",
+          "confidence": "medium",
+          "context": "Found next to state wage and tax details in the state and local taxes section."
+        },
+        {
+          "value": "Health insurance: $1,500.00",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "Located under Code DD in the other information section."
+        }
+      ]
+    },
+    {
+      "file_name": "sarah_johnson_bank_statement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/sarah_johnson_bank_statement.txt",
+      "name": "Sarah M Johnson",
+      "address": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+      "pii_candidates": [
+        {
+          "value": "Sarah M Johnson",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Account Holder: Sarah M Johnson"
+        },
+        {
+          "value": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Mailing Address: 1234 Oak Street, Apt 5B, San Francisco, CA 94102"
+        },
+        {
+          "value": "11/15/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "11/18/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "11/20/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "11/22/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "11/25/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "11/28/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "11/30/2024",
+          "pii_type": "Date of Transaction",
+          "confidence": "low",
+          "context": "Found in transaction details"
+        },
+        {
+          "value": "1-800-935-9935",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Contact information for customer support"
+        },
+        {
+          "value": "9876543210",
+          "pii_type": "Account Number",
+          "confidence": "high",
+          "context": "Bank account details found at document end"
+        },
+        {
+          "value": "121000248",
+          "pii_type": "Routing Number",
+          "confidence": "high",
+          "context": "Bank routing number found at document end"
+        }
+      ]
+    },
+    {
+      "file_name": "sarah_johnson_credit_card_statement.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/sarah_johnson_credit_card_statement.txt",
+      "name": "Sarah M Johnson",
+      "address": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+      "pii_candidates": [
+        {
+          "value": "4532-1234-5678-9010",
+          "pii_type": "Credit Card Number",
+          "confidence": "high",
+          "context": "Account Number on AMERICAN EXPRESS Monthly Statement."
+        },
+        {
+          "value": "November 30, 2024",
+          "pii_type": "Statement Date",
+          "confidence": "low",
+          "context": "Statement Date on AMERICAN EXPRESS Monthly Statement."
+        },
+        {
+          "value": "December 25, 2024",
+          "pii_type": "Payment Due Date",
+          "confidence": "low",
+          "context": "Payment Due Date on AMERICAN EXPRESS Monthly Statement."
+        },
+        {
+          "value": "$2,964.25",
+          "pii_type": "Financial Information",
+          "confidence": "medium",
+          "context": "New Balance on AMERICAN EXPRESS Monthly Statement."
+        },
+        {
+          "value": "1-800-528-4800",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Customer service contact number for making a payment"
+        },
+        {
+          "value": "4532-1234-5678-9010",
+          "pii_type": "Account Number",
+          "confidence": "high",
+          "context": "Indicated as an account number for payment"
+        }
+      ]
+    },
+    {
+      "file_name": "sarah_johnson_medical_record.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/sarah_johnson_medical_record.txt",
+      "name": "Sarah Marie Johnson",
+      "address": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+      "phone": "(555) 234-5678",
+      "pii_candidates": [
+        {
+          "value": "Johnson, Sarah Marie",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Patient Name section"
+        },
+        {
+          "value": "March 15, 1985",
+          "pii_type": "Date of Birth",
+          "confidence": "high",
+          "context": "Patient Information section"
+        },
+        {
+          "value": "MRN-456789123",
+          "pii_type": "Medical Record Number",
+          "confidence": "high",
+          "context": "Patient Information section"
+        },
+        {
+          "value": "***-**-6789",
+          "pii_type": "Social Security Number (partial)",
+          "confidence": "high",
+          "context": "Patient Information section"
+        },
+        {
+          "value": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Patient Information section"
+        },
+        {
+          "value": "(555) 234-5678",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Patient Information section"
+        },
+        {
+          "value": "sarah.johnson@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Patient Information section"
+        },
+        {
+          "value": "Michael Johnson",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Emergency Contact section"
+        },
+        {
+          "value": "(555) 234-5681",
+          "pii_type": "Phone Number",
+          "confidence": "high",
+          "context": "Emergency Contact section"
+        },
+        {
+          "value": "michael.johnson@email.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Emergency Contact section"
+        },
+        {
+          "value": "KP-789456123",
+          "pii_type": "Insurance Member ID",
+          "confidence": "high",
+          "context": "Insurance Information section"
+        },
+        {
+          "value": "GRP-456789",
+          "pii_type": "Group Number",
+          "confidence": "medium",
+          "context": "Insurance Information section"
+        },
+        {
+          "value": "Sarah Johnson",
+          "pii_type": "Subscriber Name",
+          "confidence": "high",
+          "context": "Insurance Information section"
+        },
+        {
+          "value": "December 15, 2024",
+          "pii_type": "Date",
+          "confidence": "medium",
+          "context": "Scheduled date for mammogram"
+        },
+        {
+          "value": "November 25, 2024",
+          "pii_type": "Date",
+          "confidence": "medium",
+          "context": "Date of laboratory results"
+        },
+        {
+          "value": "CA-987654",
+          "pii_type": "License Number",
+          "confidence": "high",
+          "context": "Provider's medical license number"
+        }
+      ]
+    },
+    {
+      "file_name": "sarah_johnson_pay_stub.txt",
+      "file_path": "/Users/mike/codes/pareto/samples/sarah_johnson_pay_stub.txt",
+      "name": "Sarah Johnson",
+      "address": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+      "pii_candidates": [
+        {
+          "value": "Sarah Johnson",
+          "pii_type": "Name",
+          "confidence": "high",
+          "context": "Employee Name section in the payroll statement"
+        },
+        {
+          "value": "***-**-6789",
+          "pii_type": "Partial Social Security Number",
+          "confidence": "high",
+          "context": "Social Security Number section in the payroll statement"
+        },
+        {
+          "value": "1234 Oak Street, Apt 5B, San Francisco, CA 94102",
+          "pii_type": "Home Address",
+          "confidence": "high",
+          "context": "Address section in the payroll statement"
+        },
+        {
+          "value": "3210",
+          "pii_type": "Bank Account Number (partial)",
+          "confidence": "medium",
+          "context": "Direct Deposit Information: Account: ****3210"
+        },
+        {
+          "value": "payroll@techsolutions.com",
+          "pii_type": "Email Address",
+          "confidence": "high",
+          "context": "Email: payroll@techsolutions.com"
+        },
+        {
+          "value": "Chase Bank",
+          "pii_type": "Financial Institution",
+          "confidence": "high",
+          "context": "Direct Deposit Information: Bank: Chase Bank"
+        }
+      ]
+    }
+  ]
+}
