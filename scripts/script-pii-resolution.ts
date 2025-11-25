@@ -31,8 +31,8 @@ async function runPIIResolutionScript() {
     
     const resolution = resolutionService.resolve();
 
-    // Unified schema
-    const unifiedSchema = Array.from(resolution.unified_schema.values())
+    // Canonical schema (merged from value matches)
+    const canonicalSchema = Array.from(resolution.canonical_schema.values())
       .sort((a, b) => b.total_occurrences - a.total_occurrences);
 
     // Value conflicts: same value, different types
@@ -47,13 +47,14 @@ async function runPIIResolutionScript() {
 
     console.log(`\n📄 ${file.name}`);
     
-    // Show unified schema
-    if (unifiedSchema.length > 0) {
-      console.log(`\n📋 Unified PII Schema (${unifiedSchema.length} types):`);
-      unifiedSchema.forEach((type, index) => {
+    // Show canonical schema
+    if (canonicalSchema.length > 0) {
+      console.log(`\n📋 Canonical PII Schema (${canonicalSchema.length} types):`);
+      canonicalSchema.forEach((type, index) => {
         console.log(`\n  ${index + 1}. ${type.canonical_type}`);
-        if (type.variations.length > 1) {
-          console.log(`     Variations: ${type.variations.join(', ')}`);
+        if (type.all_type_names.length > 1) {
+          console.log(`     Merged from: ${type.all_type_names.join(', ')}`);
+          console.log(`     Value matches: ${type.value_match_count}`);
         }
         console.log(`     Occurrences: ${type.total_occurrences}, Unique Values: ${type.unique_values_count}`);
         console.log(`     Confidence: High=${type.confidence_breakdown.high}, Medium=${type.confidence_breakdown.medium}, Low=${type.confidence_breakdown.low}`);

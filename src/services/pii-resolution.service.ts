@@ -166,6 +166,39 @@ export interface UnifiedPIIType {
 }
 
 /**
+ * Canonical schema entry - merged from related types
+ */
+export interface CanonicalSchemaEntry {
+  /** The canonical type name (chosen from related types) */
+  canonical_type: string;
+  
+  /** All type names that map to this canonical type */
+  all_type_names: string[];
+  
+  /** Total occurrences across all related types */
+  total_occurrences: number;
+  
+  /** All unique values from all related types */
+  all_values: string[];
+  
+  /** Number of unique values */
+  unique_values_count: number;
+  
+  /** Combined confidence breakdown */
+  confidence_breakdown: {
+    high: number;
+    medium: number;
+    low: number;
+  };
+  
+  /** All files where any related type appears */
+  files: string[];
+  
+  /** Number of value matches that linked these types */
+  value_match_count: number;
+}
+
+/**
  * Comprehensive resolution result containing all collapsed and flagged data
  */
 export interface PIIResolutionResult {
@@ -185,6 +218,9 @@ export interface PIIResolutionResult {
   /** Unified schema of all PII types */
   unified_schema: Map<string, UnifiedPIIType>;
   
+  /** Canonical schema - merged related types based on value matches */
+  canonical_schema: Map<string, CanonicalSchemaEntry>;
+  
   /** Array of all identified conflicts */
   conflicts: PIIConflict[];
   
@@ -197,6 +233,7 @@ export interface PIIResolutionResult {
     type_conflicts_count: number;
     total_conflicts: number;
     total_unified_types: number;
+    total_canonical_types: number;
   };
   
   /** Filter options used */
@@ -325,6 +362,9 @@ export class PIIResolutionService {
     // Build unified schema
     const unifiedSchema = this.buildUnifiedSchema(typeGroups);
     
+    // Build canonical schema from value matches
+    const canonicalSchema = this.buildCanonicalSchema(typeGroups, valueGroups);
+    
     // Identify conflicts
     const conflicts = this.identifyConflicts(valueGroups, typeGroups);
     
@@ -337,6 +377,7 @@ export class PIIResolutionService {
       type_conflicts_count: Array.from(typeGroups.values()).filter(g => g.has_value_conflict).length,
       total_conflicts: conflicts.length,
       total_unified_types: unifiedSchema.size,
+      total_canonical_types: canonicalSchema.size,
     };
 
     return {
@@ -344,9 +385,203 @@ export class PIIResolutionService {
       type_groups: typeGroups,
       identity_groups: identityGroups,
       unified_schema: unifiedSchema,
+      canonical_schema: canonicalSchema,
       conflicts,
       summary,
       options,
+    };
+  }
+
+  /**
+   * Build canonical schema by merging types that share values
+   * Uses connected components algorithm to group related types
+   */
+  private buildCanonicalSchema(
+    typeGroups: Map<string, TypeGroup>,
+    valueGroups: Map<string, ValueGroup>
+  ): Map<string, CanonicalSchemaEntry> {
+    // Step 1: Build type relationships from value matches
+    const typeRelations = new Map<string, Set<string>>();
+    
+    // Initialize all types
+    for (const type of typeGroups.keys()) {
+      typeRelations.set(type, new Set());
+    }
+    
+    // Find types that share values (value conflicts)
+    for (const valueGroup of valueGroups.values()) {
+      if (valueGroup.pii_types.length > 1) {
+        // These types are related - they share at least one value
+        for (const type1 of valueGroup.pii_types) {
+          for (const type2 of valueGroup.pii_types) {
+            if (type1 !== type2) {
+              typeRelations.get(type1)?.add(type2);
+              typeRelations.get(type2)?.add(type1);
+            }
+          }
+        }
+      }
+    }
+    
+    // Step 2: Find connected components (transitive closure)
+    const visited = new Set<string>();
+    const components: string[][] = [];
+    
+    for (const type of typeRelations.keys()) {
+      if (!visited.has(type)) {
+        const component: string[] = [];
+        this.dfsComponent(type, typeRelations, visited, component);
+        if (component.length > 0) {
+          components.push(component);
+        }
+      }
+    }
+    
+    // Step 3: For each component, pick canonical name and merge data
+    const canonicalSchema = new Map<string, CanonicalSchemaEntry>();
+    
+    for (const component of components) {
+      // Pick canonical name using heuristics
+      const canonicalType = this.pickCanonicalName(component, typeGroups);
+      
+      // Merge data from all types in component
+      const mergedEntry = this.mergeTypeGroups(component, typeGroups, valueGroups);
+      
+      canonicalSchema.set(canonicalType, mergedEntry);
+    }
+    
+    // Step 4: Add types that don't have value matches (standalone types)
+    for (const [type, group] of typeGroups.entries()) {
+      if (!canonicalSchema.has(type) && !Array.from(canonicalSchema.values()).some(e => e.all_type_names.includes(type))) {
+        canonicalSchema.set(type, {
+          canonical_type: type,
+          all_type_names: [type],
+          total_occurrences: group.occurrences,
+          all_values: group.values,
+          unique_values_count: group.unique_value_count,
+          confidence_breakdown: group.confidence_breakdown,
+          files: Array.from(new Set(group.files)),
+          value_match_count: 0,
+        });
+      }
+    }
+    
+    return canonicalSchema;
+  }
+
+  /**
+   * Depth-first search to find connected component
+   */
+  private dfsComponent(
+    type: string,
+    relations: Map<string, Set<string>>,
+    visited: Set<string>,
+    component: string[]
+  ): void {
+    if (visited.has(type)) return;
+    
+    visited.add(type);
+    component.push(type);
+    
+    const related = relations.get(type) || new Set();
+    for (const relatedType of related) {
+      if (!visited.has(relatedType)) {
+        this.dfsComponent(relatedType, relations, visited, component);
+      }
+    }
+  }
+
+  /**
+   * Pick canonical name from a group of related types
+   */
+  private pickCanonicalName(
+    types: string[],
+    typeGroups: Map<string, TypeGroup>
+  ): string {
+    if (types.length === 1) return types[0];
+    
+    // Heuristic 1: Most frequent (highest occurrences)
+    const sortedByOccurrences = [...types].sort((a, b) => {
+      const aGroup = typeGroups.get(a);
+      const bGroup = typeGroups.get(b);
+      const aOcc = aGroup?.occurrences || 0;
+      const bOcc = bGroup?.occurrences || 0;
+      return bOcc - aOcc;
+    });
+    
+    // If there's a clear winner (significantly more occurrences), use it
+    const topOcc = typeGroups.get(sortedByOccurrences[0])?.occurrences || 0;
+    const secondOcc = typeGroups.get(sortedByOccurrences[1])?.occurrences || 0;
+    if (topOcc > secondOcc * 1.5) {
+      return sortedByOccurrences[0];
+    }
+    
+    // Heuristic 2: Prefer standard naming (title case, no underscores)
+    const standardNames = types.filter(t => {
+      const normalized = t.toLowerCase();
+      return !normalized.includes('_') && 
+             !normalized.includes('(partial)') &&
+             !normalized.includes('(masked)') &&
+             !normalized.includes('partially');
+    });
+    
+    if (standardNames.length > 0) {
+      // Among standard names, pick shortest
+      return standardNames.reduce((a, b) => a.length < b.length ? a : b);
+    }
+    
+    // Heuristic 3: Shortest name
+    return types.reduce((a, b) => a.length < b.length ? a : b);
+  }
+
+  /**
+   * Merge multiple type groups into one canonical entry
+   */
+  private mergeTypeGroups(
+    types: string[],
+    typeGroups: Map<string, TypeGroup>,
+    valueGroups: Map<string, ValueGroup>
+  ): CanonicalSchemaEntry {
+    const allValues = new Set<string>();
+    const allFiles = new Set<string>();
+    let totalOccurrences = 0;
+    const confidenceBreakdown = { high: 0, medium: 0, low: 0 };
+    let valueMatchCount = 0;
+    
+    // Count value matches
+    for (const valueGroup of valueGroups.values()) {
+      if (valueGroup.pii_types.length > 1) {
+        const matchingTypes = valueGroup.pii_types.filter(t => types.includes(t));
+        if (matchingTypes.length > 1) {
+          valueMatchCount++;
+        }
+      }
+    }
+    
+    // Merge data from all types
+    for (const type of types) {
+      const group = typeGroups.get(type);
+      if (group) {
+        totalOccurrences += group.occurrences;
+        group.values.forEach(v => allValues.add(v));
+        group.files.forEach(f => allFiles.add(f));
+        confidenceBreakdown.high += group.confidence_breakdown.high;
+        confidenceBreakdown.medium += group.confidence_breakdown.medium;
+        confidenceBreakdown.low += group.confidence_breakdown.low;
+      }
+    }
+    
+    const canonicalType = this.pickCanonicalName(types, typeGroups);
+    
+    return {
+      canonical_type: canonicalType,
+      all_type_names: types.sort(),
+      total_occurrences: totalOccurrences,
+      all_values: Array.from(allValues),
+      unique_values_count: allValues.size,
+      confidence_breakdown: confidenceBreakdown,
+      files: Array.from(allFiles).sort(),
+      value_match_count: valueMatchCount,
     };
   }
 
