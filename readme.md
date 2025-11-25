@@ -2,6 +2,39 @@
 
 A TypeScript application for extracting and analyzing Personally Identifiable Information (PII) from documents using OpenAI's GPT models.
 
+## Pipeline (now & next)
+
+- **Current**: Extract PII into a common JSON shape (currently modeled by `src/utils/individual.schema.json` as a local stand‑in), aggregate results across many files, and use value-based grouping to see where type names disagree or overlap.
+- **Planned**: Let the canonical schema evolve over time in an external schema store, and drive a PII-obfuscation step that builds per‑individual profiles and replaces known canonical fields with realistic fakes while masking unknown types with `*****` until they’re mapped.
+- **Why**: This keeps the system conservative and safe (never guessing on unknown types) while using real data (plus optional AI assistance on ambiguous clusters) to gradually learn a stable, reusable PII schema for extraction and obfuscation.
+
+### Step-by-step pipeline & scripts
+
+1. **Extract PII for all sample documents (current)**
+   - **What**: Run the end-to-end PII scanner over everything in `samples/` and write a single JSON result file into `data/`.
+   - **Script**:
+     ```bash
+     npm start extract-pii
+     ```
+
+2. **Explore aggregated PII types and contexts (current)**
+   - **What**: Read one or more extraction result files from `data/` and see which PII types and contexts were found.
+   - **Script**:
+     ```bash
+     npm run script:extraction-reader
+     ```
+
+3. **Analyze ambiguous PII and approximate a canonical schema (current / assisted)**
+   - **What**: Group PII by value and type, detect naming conflicts, and build an approximate canonical schema by merging types that share values; for anything still ambiguous after value-based grouping, we can layer AI on top (e.g., an LLM) to recommend merges or canonical labels.
+   - **Script**:
+     ```bash
+     npm run script:pii-resolution
+     ```
+
+4. **Evolve the canonical schema and drive obfuscation (planned)**
+   - **What**: Sync the learned canonical types into a dedicated schema service (with `src/utils/individual.schema.json` acting today as a mock schema), and use that service to power a PII-obfuscation step that swaps real identities for consistent fake profiles, while masking unknown types with `*****` until they’ve been mapped and can be safely replaced.
+   - **Scripts**: to be added as the schema‑evolution, AI‑assisted disambiguation, and obfuscation features are implemented.
+
 ## Features
 
 - **PII Extraction**: Scan documents for personally identifiable information using AI
@@ -109,7 +142,6 @@ pareto/
 │   │   └── pii-scanner.service.ts
 │   ├── utils/           # Utilities and schemas
 │   │   ├── individual.schema.json
-│   │   ├── pay-stub.schema.json
 │   │   └── schema.util.ts
 │   └── index.ts         # Main application entry point
 ├── data/                # Generated extraction results
