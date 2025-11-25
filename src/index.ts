@@ -1,7 +1,7 @@
 import 'dotenv/config';
-import { readDirectory } from './services/directory.service.js';
-import { readFileContent } from './services/file.service.js';
-import { scanFileForPII } from './services/pii-scanner.service.js';
+import { readDirectory } from './services/directory.service.ts';
+import { readFileContent } from './services/file.service.ts';
+import { scanFileForPII } from './services/pii-scanner.service.ts';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
 

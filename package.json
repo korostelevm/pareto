@@ -6,7 +6,14 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "tsx src/index.ts",
-    "test:openai": "tsx src/test-openai.ts",
+    "script": "tsx scripts/runner.ts",
+    "script:list": "tsx scripts/runner.ts list",
+    "script:all": "tsx scripts/runner.ts all",
+    "script:extraction": "tsx scripts/runner.ts extraction",
+    "script:extraction-reader": "tsx scripts/runner.ts extraction-reader",
+    "script:openai": "tsx scripts/runner.ts openai",
+    "script:pii-scanner": "tsx scripts/runner.ts pii-scanner",
+    "script:pii-emily-bank": "tsx scripts/runner.ts pii-emily-bank",
     "type-check": "tsc --noEmit"
   },
   "keywords": [],

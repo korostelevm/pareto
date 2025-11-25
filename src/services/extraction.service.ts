@@ -1,4 +1,4 @@
-import { openai } from './openai.service.js';
+import { openai } from './openai.service.ts';
 import { z } from 'zod';
 import { ZodSchema } from 'zod';
 

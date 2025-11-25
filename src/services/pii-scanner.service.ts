@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { extractSchemaFromText } from './extraction.service.js';
-import { chunkFileFromDisk, Chunk } from './file.service.js';
+import { extractSchemaFromText } from './extraction.service.ts';
+import { chunkFileFromDisk, chunkFileContent } from './file.service.ts';
 
 /**
  * Zod schema for PII candidates
@@ -152,9 +152,6 @@ export function chunkAndScanText(
     combined_pii: PIICandidate[];
   }>;
 } {
-  // Import locally to avoid circular dependency
-  const { chunkFileContent } = require('./file.service.js');
-  
   const chunks = chunkFileContent(textContent, chunkSize, overlapPercentage);
 
   return {
